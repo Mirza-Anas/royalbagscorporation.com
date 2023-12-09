@@ -40,6 +40,7 @@ $(function () {
     $(".latest_tech-i3"),
     $(".latest_tech-t3"),
   ];
+  const stats = $(".stats");
 
   let dist;
 
@@ -385,11 +386,12 @@ $(function () {
         products.css({ opacity: "1" });
         animationStarter();
       }
-    } else if (scrollDistance > 3400 && scrollDistance < 5300) {
+    } else if (scrollDistance > 3400 && scrollDistance < 5150) {
       dist = scrollDistance - 3700;
+      stats.css({"opacity":"0"});
       if (scrollDistance > 3700) {
         lTechScroll.css({
-          top: `${20 - dist * 0.05}%`,
+          top: `${20 - (dist * 0.05)}%`,
         });
       }
 
@@ -426,6 +428,8 @@ $(function () {
         animationStopper();
         productBVisible = false;
       }
+    } else if (scrollDistance > 5150 && scrollDistance < 6150) {
+      stats.css({"opacity":"1"});
     }
   });
 });
