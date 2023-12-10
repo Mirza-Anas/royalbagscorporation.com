@@ -41,6 +41,7 @@ $(function () {
     $(".latest_tech-t3"),
   ];
   const stats = $(".stats");
+  const contactUs = $(".contact_us");
 
   let dist;
 
@@ -428,8 +429,11 @@ $(function () {
         animationStopper();
         productBVisible = false;
       }
-    } else if (scrollDistance > 5150 && scrollDistance < 6150) {
+    } else if (scrollDistance > 5400 && scrollDistance < 6000) {
+      contactUs.css({"opacity" : "0"});
       stats.css({"opacity":"1"});
+    } else if (scrollDistance > 6000 && scrollDistance < 6500) {
+      contactUs.css({"opacity" : "1"});
     }
   });
 });
