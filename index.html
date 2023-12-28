@@ -3,448 +3,274 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./functions.js"></script>
-    <title>Royal Bags Corporation</title>
+    <script src="./javascript/functions.js"></script>
+    <title>RBC</title>
   </head>
   <body>
-    <div class="block1"></div>
-    <div class="block2"></div>
-    <div class="background">
-      <div class="background-box1"></div>
-    </div>
-    <header class="header-container">
-      <nav>
-        <ul>
-          <li class="home-button">Home</li>
-          <li class="products-button">Products</li>
-          <li class="our_team-button">Our Team</li>
-          <li class="contact_us-button">Contact Us</li>
-        </ul>
-        <img class="header-logo" src="./images/logo.png" alt="logo" />
-        <h1 class="header-brand_name reveal-fx reveal-fx--translate-up">RBC</h1>
-        <h2 class="header-brand_name_full">Royal Bags Corp.</h2>
-      </nav>
-      <div class="header-socials-icon">
-        <div class="header-instagram-icon">
-          <div class="social_icon-popup">
-            <div class="social_icon-popup-inner">
-              <img src="./images/instagram_QR.png" alt="Instagram-QR" />
-              <p>Scan to open Instagram in mobile devices.</p>
-              <div>Click on the icon to open Instagram in new tab</div>
-            </div>
+    <header>
+      <div class="header1">
+        <div class="header-logo">
+          <div class="header-logo-upper">
+            <img src="images/logo.png" alt="img" />
+            <h1>RBC</h1>
           </div>
-          <a
-            href="https://instagram.com/thread_bags?igshid=YzAwZjE1ZTI0Zg=="
-            target="_blank"
-          >
-            <img src="./images/instagram.svg" alt="instagram-logo" />
-          </a>
+          <!-- <div class="header-logo-lower">
+            <h1>Royal Bags Corp.</h1>
+          </div> -->
         </div>
-        <div class="header-facebook-icon">
-          <div class="social_icon-popup">
-            <div class="social_icon-popup-inner">
-              <img src="./images/facebook_QR.png" alt="Facebook-QR" />
-              <p>Scan to open Facebook in mobile devices.</p>
-              <div>Click on the icon to open Facebook in new tab</div>
-            </div>
-          </div>
-          <a
-            href="https://www.facebook.com/threadbags?mibextid=kFxxJD"
-            target="_blank"
-          >
-            <img src="./images/facebook.svg" alt="facebook-logo" />
-          </a>
+        <div class="header-nav_bar">
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Product Gallery</li>
+            <li>Contact Us</li>
+          </ul>
         </div>
-        <div class="header-linkedin-icon">
-          <div class="social_icon-popup">
-            <div class="social_icon-popup-inner">
-              <img src="./images/linkedin_QR.png" alt="instagram-QR" />
-              <p>Scan to open Linkedin in mobile devices.</p>
-              <div>Click on the icon to open Linkedin in new tab</div>
-            </div>
+        <div class="header-social_icons">
+          <div>
+            <img src="./images/facebook.svg" alt="facebook" />
+            <img src="./images/instagram.svg" alt="instagram" />
+            <img src="./images/linkedin.svg" alt="linkedIn" />
           </div>
-          <a href="https://in.linkedin.com/company/threadbags" target="_blank">
-            <img src="./images/linkedin.svg" alt="linkedin-logo" />
-          </a>
         </div>
       </div>
     </header>
     <main>
-      <div class="pitch">
-        <div class="pitch-write">
-          <h3>Have a baggable Product?</h3>
-          <hr />
-          <h3>count on us to get it noticed</h3>
+      <div class="home">
+        <div class="backgrounds">
+          <div class="background_block1"></div>
+          <!-- <div class="background_block2"></div>
+          <div class="background_block3"></div>
+          <div class="background_block4"></div>
+          <div class="background_block5"></div> -->
         </div>
-        <div class="insta-base insta-base-grocery">
-          <h3>FMCG Products</h3>
-          <img src="./images/fmcg_product.jfif" alt="FMCG-product" />
-          <h2>Home Groceries, Detergents, etc.</h2>
+        <div class="home-first_half">
+          <h3 class="home-fh1">Have a Business?</h3>
+          <!-- <h3 class="home-fh2">But not getting noticed.</h3> -->
+          <h3 class="home-fh3">Count on us to get it NOTICED!</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
+            autem sint consequatur ratione vel, optio nostrum obcaecati
+            architecto magnam nihil numquam vero aspernatur blanditiis minus nam
+            inventore et minima repellendus.
+          </p>
+          <div>
+            <button class="home-products">Explore Products</button>
+            <button class="home-connect">Connect with US</button>
+          </div>
         </div>
-        <div class="insta-base insta-base-spices">
-          <h3>Indian Spices</h3>
-          <img src="./images/spices_product.jfif" alt="spices-product" />
-          <h2>Different Indian flavours</h2>
-        </div>
-        <div class="insta-base insta-base-clothes">
-          <h3>Clothing Products</h3>
-          <img src="./images/clothing_product.jfif" alt="clothing-product" />
-          <h2>Shirts, Hoodies, etc.</h2>
-        </div>
-        <div class="insta-base insta-base-accessories">
-          <h3>Accessories</h3>
+        <div class="home-second_half">
+          <img src="./images/Home/brand_bag_plain.png" alt="" />
           <img
-            src="./images/accessories_product.jfif"
-            alt="accessories-product"
+            class="home-promotion_img"
+            src="./images/Home/brand_bag_prom.png"
+            alt=""
           />
-          <h2>Headphones, Mobiles, etc.</h2>
-        </div>
-        <div class="insta-base insta-base-jwellery">
-          <h3>Jwellery</h3>
-          <img src="./images/jwellery-product.jfif" alt="jwellery-product" />
-          <h2>Rings, Bangles, etc.</h2>
         </div>
       </div>
       <div class="about_us">
-        <div class="about_us-upper-container">
-          <div class="about_us-image">
-            <div>
-              <h2>ABOUT US</h2>
+        <div class="about_us-upper">
+          <div class="about_us-upper-img">
+            <img src="./images/about_us/old_man_img.jpeg" alt="old_man_img" />
+          </div>
+          <div class="about_us-upper-content">
+            <div class="about_us-upper-heading">
+              <h2>ABOUT</h2>
+              <h2>US</h2>
             </div>
-          </div>
-          <div class="about_us-intro">
-            <h3>What We Do?</h3>
-            <h4>
-              We, at Royal Bags Corporation, specialize in crafting exceptional
-              promotional bags. Our dedicated team, guided by seasoned
-              expertise, passionately manufactures a wide spectrum of Non-woven,
-              HDPE, and PPE packaging bags, boasting captivating designs and
-              impeccable quality. Focused on customer satisfaction, we
-              prioritize delivering products that meet your precise demands. Our
-              forte lies in creating visually appealing promotional bags,
-              tailored to captivate a new audience for your business.
-            </h4>
-            <button>Explore Our Products</button>
-          </div>
-        </div>
-        <div class="about_us-lower-container">
-          <div class="about_us-lc1">
-            <img
-              src="./images/work-experience-icon.png"
-              alt="work-experience-icon"
-            />
-            <h3>Our Experience</h3>
-            <h4>
-              With an extensive experience spanning over four decades, Royal
-              Bags Corporation has stood as a pillar of expertise since our
-              inception in 1977. Specializing in the craft of manufacturing
-              top-tier promotional bags, our journey reflects a rich legacy of
-              commitment and excellence.
-            </h4>
-          </div>
-          <div class="about_us-lc2">
-            <img src="./images/objective-icon.png" alt="objective-icon" />
-            <h3>Our Objective</h3>
-            <h4>
-              Dedicated to achieving customer satisfaction, Royal Bags
-              Corporation stands firm in its mission since 1977. Our primary
-              objective revolves around delivering excellence in the realm of
-              promotional bag manufacturing. Our unwavering dedication to
-              customer contentment drives every facet of our operations,
-              ensuring your satisfaction remains at the core of our endeavors.
-            </h4>
-          </div>
-          <div class="about_us-lc3">
-            <img src="./images/our-vision.png" alt="our-vision" />
-            <h3>Our Vision</h3>
-            <h4>
-              Driven by a visionary approach, Royal Bags Corporation envisions
-              pioneering advancements in promotional bag manufacturing.
-              Embracing cutting-edge technology and employing the latest
-              machinery, we ensure precision and efficiency in crafting
-              superior-quality Non-woven and HDPE/PPE packaging bags. Committed
-              to excellence, our dedicated team leverages the finest fabric
-              quality and innovative techniques to create products that
-              epitomize sophistication and durability.
-            </h4>
-          </div>
-        </div>
-      </div>
-      <div class="our_products">
-        <div class="our_products-banner">
-          <div class="our_products-banner-heading">
-            <h2>Our Products</h2>
             <hr />
-            <h3>Backpack Range</h3>
-          </div>
-          <div class="our_products-details">
-            <div class="our_products-details-blank"></div>
-            <div class="our_products-details-text">
-              <div class="our_products-details-heading">
-                <h5>Product Details</h5>
-              </div>
-              <div class="our_products-details-points">
-                <img
-                  src="./images/product-details-icon/textile.png"
-                  alt="Fabric Type"
-                />
-                <h4>Fabric:</h4>
-                <h4>Non Woven</h4>
-              </div>
-              <div class="our_products-details-points">
-                <img
-                  src="./images/product-details-icon/printing.png"
-                  alt="Print Type"
-                />
-                <h4>Print Type:</h4>
-                <h4>Screen Print</h4>
-              </div>
-              <div class="our_products-details-points">
-                <img
-                  src="./images/product-details-icon/weight.png"
-                  alt="Weight Capacity"
-                />
-                <h4>Weight Capacity:</h4>
-                <h4>30 Kgs</h4>
-              </div>
-              <div class="our_products-details-points">
-                <img
-                  src="./images/product-details-icon/suitcase.png"
-                  alt="Dimensions"
-                />
-                <h4>Dimensions:</h4>
-                <h4>34x45x12 cm</h4>
-              </div>
-              <div class="our_products-details-end">
-                <img
-                  src="./images/product-details-icon/down.png"
-                  alt="down icon"
-                />
-              </div>
-            </div>
+            <h3>
+              Royal Bags Corporation Established in the year 1971 by Lorem ipsum
+              dolor it was his vision which got us this far.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+              aperiam esse itaque, sint reiciendis deleniti, nobis ex mollitia
+              fugit doloremque numquam eligendi. Praesentium nam eos harum
+              architecto magni labore recusandae! Facere, dolorum fuga!
+              Laboriosam ullam, explicabo, cum itaque quam debitis saepe aliquid
+              ratione a autem optio? Unde, suscipit explicabo? Qui laudantium
+              dicta laboriosam voluptas odio autem nostrum? Nesciunt nam odio
+              blanditiis debitis ad natus laborum enim quam voluptatibus
+              tenetur....
+            </p>
+            <button>Read More</button>
           </div>
         </div>
-        <div class="our_products-forward">
-          <img
-            src="./images/forward-backward-stop/previous.png"
-            alt="backward Button"
-          />
-          <img
-            src="./images/forward-backward-stop/stop-button.png"
-            alt="stop Button"
-          />
-          <img
-            src="./images/forward-backward-stop/fast-forward.png"
-            alt="forward Button"
-          />
-        </div>
-        <div class="our_products-card-shape our_products-in-card"></div>
-        <div class="our_products-card-shape our_products-card1"></div>
-        <div class="our_products-card-shape our_products-card2"></div>
-        <div class="our_products-card-shape our_products-card3"></div>
-        <div class="our_products-card-shape our_products-card4"></div>
-        <div class="our_products-card-shape our_products-card5"></div>
-        <div class="our_products-card-shape our_products-card6"></div>
-        <div class="our_products-card-shape our_products-card7"></div>
-        <div class="our_products-card-shape our_products-out-card"></div>
-      </div>
-      <div class="latest_tech">
-        <div class="latest_tech-scroll">
-          <div class="latest_tech-heading">
-            <h2>Latest Machinery We Use</h2>
+        <div class="about_us-lower">
+          <div class="about_us-experience">
+            <img src="./images/about_us/expertise.png" alt="experience" />
+            <!-- https://www.flaticon.com/free-icon/expertise_9874840?k=1703325379605&log-in=google -->
+            <h3>Experience</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, delectus. Nemo iure ipsa veritatis quaerat ut.
+              Quod ipsam neque molestias voluptate excepturi sint reiciendis
+              blanditiis?
+            </p>
           </div>
-          <div class="latest_tech-pole"></div>
-          <div class="latest_tech-image latest_tech-i1">
-            <div class="latest_tech-i1-div">
-              <img
-                class="latest_tech-i1"
-                src="./images/advanced-machines/offset-printing.png"
-                alt="offset-printing-machine"
-              />
-            </div>
-          </div>
-          <div class="latest_tech-text latest_tech-t1">
-            <div class="latest_tech-text-div latest_tech-t1-div">
-              <div class="latest_tech-t11">
-                <h5>Advancement</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur hic quidem laudantium explicabo quis optio,
-                  architecto ducimus commodi consectetur iusto eius sapiente
-                  deserunt sequi minus, tempora perspiciatis voluptatibus odit
-                  praesentium.
-                </p>
-              </div>
-              <div class="latest_tech-t12">
-                <h5>Improvement</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Debitis neque praesentium explicabo qui deserunt vero, sed,
-                  laboriosam, dolores ab rerum ducimus facilis similique
-                  voluptatum laudantium atque veritatis. Rerum, ullam.
-                  Consectetur hic deleniti sunt eaque!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="latest_tech-image latest_tech-i2">
-            <div class="latest_tech-i2-div">
-              <img
-                src="./images/advanced-machines/sewing-machine.png"
-                alt="sewing-machine"
-              />
-            </div>
-          </div>
-          <div class="latest_tech-text latest_tech-t2">
-            <div class="latest_tech-text-div latest_tech-t2-div">
-              <div class="latest_tech-t11">
-                <h5>Advancement</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur hic quidem laudantium explicabo quis optio,
-                  architecto ducimus commodi consectetur iusto eius sapiente
-                  deserunt sequi minus, tempora perspiciatis voluptatibus odit
-                  praesentium.
-                </p>
-              </div>
-              <div class="latest_tech-t12">
-                <h5>Improvement</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Debitis neque praesentium explicabo qui deserunt vero, sed,
-                  laboriosam, dolores ab rerum ducimus facilis similique
-                  voluptatum laudantium atque veritatis. Rerum, ullam.
-                  Consectetur hic deleniti sunt eaque!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="latest_tech-image latest_tech-i3">
-            <div class="latest_tech-i3-div">
-              <img
-                src="./images/advanced-machines/cutting-machine.png"
-                alt="cutting-machine"
-              />
-            </div>
-          </div>
-          <div class="latest_tech-text latest_tech-t3">
-            <div class="latest_tech-text-div latest_tech-t3-div">
-              <div class="latest_tech-t11">
-                <h5>Advancement</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur hic quidem laudantium explicabo quis optio,
-                  architecto ducimus commodi consectetur iusto eius sapiente
-                  deserunt sequi minus, tempora perspiciatis voluptatibus odit
-                  praesentium.
-                </p>
-              </div>
-              <div class="latest_tech-t12">
-                <h5>Improvement</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Debitis neque praesentium explicabo qui deserunt vero, sed,
-                  laboriosam, dolores ab rerum ducimus facilis similique
-                  voluptatum laudantium atque veritatis. Rerum, ullam.
-                  Consectetur hic deleniti sunt eaque!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="stats">
-        <div class="stats-heading">
-          <h2>OUR MAJOR CLIENTS</h2>
           <hr />
-        </div>
-        <div class="stats-client-section">
-          <div class="stats-cs-div1">
-            <img src="./images/client_logo/sargam.png" alt="sargam" />
+          <div class="about_us-mission">
+            <img src="./images/about_us/mission.png" alt="Mission" />
+            <h3>Mission</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, delectus. Nemo iure ipsa veritatis quaerat ut.
+              Quod ipsam neque molestias voluptate excepturi sint reiciendis
+              blanditiis?
+            </p>
           </div>
-          <div class="stats-cs-div2">
-            <img src="./images/client_logo/sapat.png" alt="sapat" />
-          </div>
-          <div class="stats-cs-di3">
-            <img src="./images/client_logo/camel_tea.png" alt="camel_tea" />
-          </div>
-          <div class="stats-cs-div4">
-            <img
-              src="./images/client_logo/maharaja_tea.png"
-              alt="maharaja_tea"
-            />
-          </div>
-          <div class="stats-cs-div5">
-            <img src="./images/client_logo/sanan group.png" alt="sanan_group" />
-          </div>
-        </div>
-        <div class="stats-count-section">
-          <div class="stats-cs-1">
-            <img src="./images/stats_section/cleints.png" alt="cleints" />
-            <p class="stats-cs-11">987+</p>
-            <p class="stats-cs-12">Clients</p>
-          </div>
-          <div class="stats-cs-2">
-            <img src="./images/stats_section/employees.png" alt="employees" />
-            <p class="stats-cs-21">60+</p>
-            <p class="stats-cs-22">Employees</p>
-          </div>
-          <div class="stats-cs-3">
-            <img src="./images/stats_section/experience.png" alt="experience" />
-            <p class="stats-cs-31">50+</p>
-            <p class="stats-cs-32">Years of Experience</p>
+          <hr />
+          <div class="about_us-vision">
+            <img src="./images/about_us/eye.png" alt="Vision" />
+            <h3>Vision</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, delectus. Nemo iure ipsa veritatis quaerat ut.
+              Quod ipsam neque molestias voluptate excepturi sint reiciendis
+              blanditiis?
+            </p>
           </div>
         </div>
+      </div>
+
+      <div class="products-main">
+        <div class="products-heading">
+          <div class="products-gallery">Gallery</div>
+          <h2>Our Product</h2>
+          <!-- <hr /> -->
+        </div>
+        <div class="products">
+          <div class="products-img1"></div>
+          <div class="products-img2"></div>
+          <div class="products-img3"></div>
+          <div class="products-img4"></div>
+          <div class="products-img5"></div>
+          <div class="products-img6"></div>
+          <div class="products-img7"></div>
+          <div class="products-img8"></div>
+          <div class="products-img9"></div>
+          <div class="products-img10"></div>
+          <div class="products-img11"></div>
+        </div>
+      </div>
+
+      <div class="tech">
+        <div class="tech-heading">
+          <p>Some of our latest</p>
+          <p>Technology</p>
+        </div>
+        <div class="tech-1">
+          <img src="./images/advanced-machines/cutting_machine.png" alt="cutting_machine">
+          <h4>Cutting Machines</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusamus voluptatum, quibusdam tenetur quaerat quas! Perspiciatis voluptatibus nostrum neque consectetur aperiam praesentium alias delectus.</p>
+        </div>
+        <div class="tech-2">
+          
+          <img src="./images/advanced-machines/offset_printing.jpg" alt="offset_printing_machine">
+          <h4>4 needle sewing</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusamus voluptatum, quibusdam tenetur quaerat quas! Perspiciatis voluptatibus nostrum neque consectetur aperiam praesentium alias delectus.</p>
+        </div>
+        <div class="tech-3">
+          <img src="./images/advanced-machines/4needle_sewing.jpg" alt="4needle_sewing">
+          <h4>Offset Printing</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi accusamus voluptatum, quibusdam tenetur quaerat quas! Perspiciatis voluptatibus nostrum neque consectetur aperiam praesentium alias delectus.</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stats-barcode"></div>
+        <div class="stats-heading">
+          <h2>stats</h2>
+        </div>
+        <div class="stats-projects">
+          <p>250</p>
+          <h6>PROJECTS</h6>
+        </div>
+        <div class="stats-clients">
+          <p>58</p>
+          <h6>CLIENTS</h6>
+        </div>
+        <div class="stats-yoe">
+          <p>23</p>
+          <h6>YEARS OF EXPERIENCE</h6>
+        </div>
+        <div class="stats-team">
+          <p>72</p>
+          <h6>TEAM MEMBERS</h6>
+        </div>
+        <div class="stats-workshops">
+          <p>3</p>
+          <h6>WORKSHOPS</h6>
+        </div>
+        <div class="stats-end">
+          <h3>Proves Our Excellence</h3>
+        </div>
+      </div>
+
+      <div class="clients">
+        <div class="clients-image"></div>
+        <div class="clients-heading">
+          <h3>OUR MAJOR CLIENTS</h3>
+          <hr>
+        </div>
+        <div class="clients-sargam">
+          <img src="./images/client_logo/sargam.png" alt="sargam">
+        </div>
+        <div class="clients-sapat">
+          <img src="./images/client_logo/sapat.png" alt="sapat">
+        </div>
+        <div class="clients-maharaja">
+          <img src="./images/client_logo/maharaja_tea.png" alt="sapat">
+        </div>
+        <div class="clients-camel-tea">
+          <img src="./images/client_logo/camel_tea.png" alt="sapat">
+        </div>
+        <div class="clients-sanan-group">
+          <img src="./images/client_logo/sanan group.png" alt="sapat">
+        </div> 
       </div>
       <div class="contact_us">
-        <div class="contact_us-header">
-          <div class="contact_us-main-heading">
-            <h2>CONTACT</h2>
+        <div class="contact_us-content">
+          <h2>Contact Us</h2>
+          <div class="contact_us-address">
+            <img src="./images/location.png" alt="location">
+            <p>39 A, Sikandrabad Colony, Mari Mata Road, Indore, (M.P)</p>
           </div>
-          <div class="contact_us-sub-heading">
-            <h2>GET IN TOUCH</h2>
+          <div class="contact_us-mail">
+            <img src="./images/mail.png" alt="mail">
+            <p>royalbagscorporation@gmail.com</p>
+          </div>
+          <div class="contact_us-number">
+            <img src="./images/call.png" alt="call">
+            <p>+91-9827536916</p>
+          </div>
+          <div class="contact_us-socials">
+            <h4>Connect With Us</h4>
+            <div class="contact_us-socials-images">
+              <img src="./images/facebook.svg" alt="facebook">
+              <img src="./images/instagram.png" alt="instagram">
+              <img src="./images/linkedin.svg" alt="linkedIn">
+            </div>
           </div>
         </div>
-        <div class="contact_us-content">
-          <div class="contact_us-details">
-            <h5>Feel free to Connect!</h5>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
-              doloribus quisquam recusandae, iste exercitationem temporibus
-              provident aliquam ut ad nam.
-            </p>
-            <div class="contact_us-mail-phone">
-              <div class="contact_us-mail-section">
-                <img src="./images/mail.png" alt="mail">
-                <h6>Mail Us</h6>
-                <h6>royalbagscorporation@gmail.com</h6>
-              </div>
-              <div class="contact_us-phone-section">
-                <img src="./images/call.png" alt="call">
-                <h6>Call Us</h6>
-                <h6>+919827536916</h6>
-              </div>
-            </div>
-            <h5 class="contact_us-follow">Follow Us</h5>
-            <div class="contact_us-socials">
-              <img src="./images/instagram_fu.png" alt="instagram">
-              <img src="./images/facebook_fu.png" alt="facebook">
-              <img src="./images/linkedin-logo_fu.png" alt="linkedin">
-            </div>
-          </div>
-          <div class="contact_us-form">
-            <form action="">
-              <input type="text" id="user-name" name="user-name" placeholder="Enter your Name"> <br>
-              <input type="text" id="email-address" name="email-address" placeholder="Enter a valid Email Address"><br>
-              <textarea id="message" name="message" rows="6" placeholder=" Enter your Message"></textarea><br>
-              <input type="checkbox" id="agree-box" name="agree-box">
-              <label for="agree-box"> I agree to share my email address</label><br>
-              <input type="submit" id="contact_us-submit" value="Submit">
+        <div class="contact_us-form">
+          <div class="contact-form-div">
+            <h4>Get in Touch</h4>
+            <p>feel free to drop a message below!</p>
+            <form action="/submit-action">
+              <input type="text" id="form-name" name="form-name" placeholder="Your Name">
+              <input type="text" id="form-mail" name="form-mail" placeholder="Your Mail Address">
+              <textarea name="message" id="form-message" rows="10" placeholder="Message"></textarea>
+              <input type="submit" id="form-submit" value="SEND">
             </form>
           </div>
         </div>
+      </div>
+      <div class="copyright">
+        &#169; Copyright 2023, Royal Bags Corporation
       </div>
     </main>
   </body>
