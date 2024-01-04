@@ -125,7 +125,7 @@
   }
   .about_us {
     margin-top: 10vh;
-    height: 100vh;
+    min-height: 120vh;
   }
   .about_us .about_us-upper {
     width: 100%;
@@ -153,9 +153,10 @@
   .about_us .about_us-upper .about_us-upper-content hr {
     width: 70%;
     margin-bottom: 1.5vh;
+    border: 0.3vw solid black;
   }
   .about_us .about_us-upper .about_us-upper-content h3 {
-    font-size: 5vw;
+    font-size: 4.2vw;
     width: 100%;
     margin-bottom: 1vh;
   }
@@ -164,7 +165,71 @@
     font-size: 3.2vw;
   }
   .about_us .about_us-upper .about_us-upper-content button {
+    font-size: 4vw;
+    padding: 1vw 0;
+  }
+  .about_us .about_us-lower {
+    width: 100%;
+    margin-top: 5vh;
+    background-color: blue;
+    height: 50vh;
+  }
+  .about_us .about_us-lower .about_us-experience {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 3%;
+  }
+  .about_us .about_us-lower .about_us-experience img {
+    width: 4vw;
+  }
+  .about_us .about_us-lower .about_us-experience h3 {
     font-size: 3vw;
+  }
+  .about_us .about_us-lower .about_us-experience p {
+    font-size: 2.6vw;
+  }
+  .about_us .about_us-lower .about_us-mission {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 3%;
+  }
+  .about_us .about_us-lower .about_us-mission img {
+    width: 4vw;
+  }
+  .about_us .about_us-lower .about_us-mission h3 {
+    font-size: 3vw;
+  }
+  .about_us .about_us-lower .about_us-mission p {
+    font-size: 2.6vw;
+  }
+  .about_us .about_us-lower .about_us-vision {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 3%;
+  }
+  .about_us .about_us-lower .about_us-vision img {
+    width: 4vw;
+  }
+  .about_us .about_us-lower .about_us-vision h3 {
+    font-size: 3vw;
+  }
+  .about_us .about_us-lower .about_us-vision p {
+    font-size: 2.6vw;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -264,22 +329,13 @@
   }
   .about_us {
     margin-top: 10vh;
-    display: flex;
     height: 140vh;
-    width: 100%;
-    flex-direction: column;
-    overflow: hidden;
   }
   .about_us .about_us-upper {
-    display: flex;
     height: 92vh;
-    width: 100%;
   }
   .about_us .about_us-upper .about_us-upper-img {
-    display: flex;
     width: 50%;
-    height: 100%;
-    align-items: center;
     justify-content: flex-end;
   }
   .about_us .about_us-upper .about_us-upper-img img {
@@ -287,21 +343,14 @@
     width: 70%;
   }
   .about_us .about_us-upper .about_us-upper-content {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
     width: 50%;
   }
   .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading {
-    display: flex;
     column-gap: 1vw;
   }
   .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading h2 {
     font-size: 4vw;
-  }
-  .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading :nth-child(2) {
-    color: rgb(226, 196, 27);
   }
   .about_us .about_us-upper .about_us-upper-content hr {
     width: 50%;
@@ -312,23 +361,14 @@
     font-size: 2.3vw;
     width: 80%;
     margin-bottom: 1vw;
-    font-weight: 100;
-    font-style: italic;
   }
   .about_us .about_us-upper .about_us-upper-content p {
-    justify-self: center;
     width: 80%;
     font-size: 1.3vw;
   }
   .about_us .about_us-upper .about_us-upper-content button {
-    margin-top: 3vh;
-    border: 0.1vw solid black;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5vw;
     padding: 0.5vw 1vw;
     font-size: 1.1vw;
-    font-family: "Times New Roman", Times, serif;
   }
   .about_us .about_us-lower {
     display: flex;
@@ -566,9 +606,6 @@ header {
 .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading :nth-child(2) {
   color: rgb(226, 196, 27);
 }
-.about_us .about_us-upper .about_us-upper-content hr {
-  border: 0.15vw solid black;
-}
 .about_us .about_us-upper .about_us-upper-content h3 {
   font-weight: 100;
   font-style: italic;
@@ -582,78 +619,12 @@ header {
   background-color: rgb(0, 0, 0);
   color: white;
   border-radius: 5vw;
-  padding: 0.5vw 1vw;
   font-family: "Times New Roman", Times, serif;
 }
 .about_us .about_us-lower {
   display: flex;
-  width: 90%;
-  margin: 5% 2% 5% 5%;
-}
-.about_us .about_us-lower hr {
-  align-self: center;
-  border: 0.12vw solid rgb(226, 196, 27);
-  height: 60%;
-}
-.about_us .about_us-lower .about_us-experience {
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  height: 40vh;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  margin: 0 4%;
-  row-gap: 3%;
-}
-.about_us .about_us-lower .about_us-experience img {
-  width: 4vw;
-}
-.about_us .about_us-lower .about_us-experience h3 {
-  font-size: 1.4vw;
-}
-.about_us .about_us-lower .about_us-experience p {
-  font-size: 1.3vw;
-}
-.about_us .about_us-lower .about_us-mission {
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  height: 40vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0 4%;
-  row-gap: 3%;
-}
-.about_us .about_us-lower .about_us-mission img {
-  width: 4vw;
-}
-.about_us .about_us-lower .about_us-mission h3 {
-  font-size: 1.4vw;
-}
-.about_us .about_us-lower .about_us-mission p {
-  font-size: 1.3vw;
-}
-.about_us .about_us-lower .about_us-vision {
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  height: 40vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0 4%;
-  row-gap: 3%;
-}
-.about_us .about_us-lower .about_us-vision img {
-  width: 4vw;
-}
-.about_us .about_us-lower .about_us-vision h3 {
-  font-size: 1.4vw;
-}
-.about_us .about_us-lower .about_us-vision p {
-  font-size: 1.3vw;
 }
 
 .products-main .products-heading {
