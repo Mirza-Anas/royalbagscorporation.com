@@ -75,6 +75,7 @@
     justify-content: center;
     width: 100%;
     height: 50%;
+    margin-top: 2vh;
   }
   .home .home-first_half .home-fh1 {
     font-size: 8vw;
@@ -123,13 +124,47 @@
     margin-top: -1vh;
   }
   .about_us {
-    margin-top: 0vh;
-    background-color: blue;
-    display: flex;
-    height: 140vh;
+    margin-top: 10vh;
+    height: 100vh;
+  }
+  .about_us .about_us-upper {
     width: 100%;
     flex-direction: column;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+  .about_us .about_us-upper .about_us-upper-img {
+    width: 100%;
+    justify-content: center;
+  }
+  .about_us .about_us-upper .about_us-upper-img img {
+    width: 80%;
+  }
+  .about_us .about_us-upper .about_us-upper-content {
+    margin-top: 2vh;
+    width: 80%;
+  }
+  .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading {
+    column-gap: 2vh;
+  }
+  .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading h2 {
+    font-size: 10vw;
+  }
+  .about_us .about_us-upper .about_us-upper-content hr {
+    width: 70%;
+    margin-bottom: 1.5vh;
+  }
+  .about_us .about_us-upper .about_us-upper-content h3 {
+    font-size: 5vw;
+    width: 100%;
+    margin-bottom: 1vh;
+  }
+  .about_us .about_us-upper .about_us-upper-content p {
+    width: 100%;
+    font-size: 3.2vw;
+  }
+  .about_us .about_us-upper .about_us-upper-content button {
+    font-size: 3vw;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -507,60 +542,39 @@ header {
 
 .about_us {
   display: flex;
-  height: 140vh;
   width: 100%;
   flex-direction: column;
   overflow: hidden;
 }
 .about_us .about_us-upper {
   display: flex;
-  height: 92vh;
   width: 100%;
 }
 .about_us .about_us-upper .about_us-upper-img {
   display: flex;
-  width: 50%;
   height: 100%;
   align-items: center;
-  justify-content: flex-end;
-}
-.about_us .about_us-upper .about_us-upper-img img {
-  margin-right: 8%;
-  width: 70%;
 }
 .about_us .about_us-upper .about_us-upper-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  width: 50%;
 }
 .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading {
   display: flex;
-  column-gap: 1vw;
-}
-.about_us .about_us-upper .about_us-upper-content .about_us-upper-heading h2 {
-  font-size: 4vw;
 }
 .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading :nth-child(2) {
   color: rgb(226, 196, 27);
 }
 .about_us .about_us-upper .about_us-upper-content hr {
-  width: 50%;
   border: 0.15vw solid black;
-  margin-bottom: 1.5vw;
 }
 .about_us .about_us-upper .about_us-upper-content h3 {
-  font-size: 2.3vw;
-  width: 80%;
-  margin-bottom: 1vw;
   font-weight: 100;
   font-style: italic;
 }
 .about_us .about_us-upper .about_us-upper-content p {
   justify-self: center;
-  width: 80%;
-  font-size: 1.3vw;
 }
 .about_us .about_us-upper .about_us-upper-content button {
   margin-top: 3vh;
@@ -569,7 +583,6 @@ header {
   color: white;
   border-radius: 5vw;
   padding: 0.5vw 1vw;
-  font-size: 1.1vw;
   font-family: "Times New Roman", Times, serif;
 }
 .about_us .about_us-lower {
