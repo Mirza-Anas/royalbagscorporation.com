@@ -31,10 +31,10 @@ $(() => {
     const touchMove = (e) => {
         endX = startX - e.touches[0].clientX;
 
-        if (endX > 100) {
+        if (endX > 50) {
             aboutFlag = true;
             leftOrRight = true;
-        } else if (endX < -100) {
+        } else if (endX < -50) {
             aboutFlag = true;
             leftOrRight = false;
         } else {
@@ -43,35 +43,40 @@ $(() => {
         }
     };
     const touchEnd = () => {
+        // aboutSlide[0].scrollTo({
+        //     left: aboutSlide.scrollLeft(),
+        // });
         let width = aboutSlide[0].clientWidth;
         const nSlide = Math.ceil(aboutCWidth / width) + 1;
 
         if (aboutFlag && leftOrRight) {
             aboutSlide[0].scrollTo({
-                left: 430 * nSlide,
+                left: width * nSlide,
                 behavior: "smooth",
             });
         } else if (aboutFlag && !leftOrRight) {
             aboutSlide[0].scrollTo({
-                left: 430 * (nSlide - 2),
+                left: width * (nSlide - 2),
                 behavior: "smooth",
             });
         } else {
             aboutSlide[0].scrollTo({
-                left: 430 * (nSlide - 1),
+                left: width * (nSlide - 1),
                 behavior: "smooth",
             });
         }
-        console.log(nSlide)
         aboutFlag = false;
         leftOrRight = true;
+
+        // setTimeout(()=>{
+        //     aboutSlide[0].scrollTo({
+        //         left: width * (Math.ceil(aboutSlide.scrollLeft() / width)),
+        //         behavior:"smooth"
+        //     });
+        // },1000)
+        
     };
 
-    const touchScroll = (e) =>{
-        e.preventDefault();
-    }
-
-    aboutSlide[0].addEventListener("scroll", touchScroll);
     aboutSlide[0].addEventListener("touchstart", touchStart);
     aboutSlide[0].addEventListener("touchmove", touchMove);
     aboutSlide[0].addEventListener("touchend", touchEnd);
