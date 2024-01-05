@@ -193,14 +193,15 @@
     border-radius: 10vw;
   }
   .about_us .about_us-lower .about_us-experience img {
-    width: 20vw;
+    width: 18vw;
   }
   .about_us .about_us-lower .about_us-experience h3 {
-    font-size: 8vw;
+    font-size: 6vw;
     color: rgb(212, 184, 25);
+    margin-bottom: 2vw;
   }
   .about_us .about_us-lower .about_us-experience p {
-    font-size: 5.2vw;
+    font-size: 4vw;
   }
   .about_us .about_us-lower .about_us-mission {
     flex-direction: column;
@@ -215,14 +216,15 @@
     border-radius: 10vw;
   }
   .about_us .about_us-lower .about_us-mission img {
-    width: 20vw;
+    width: 18vw;
   }
   .about_us .about_us-lower .about_us-mission h3 {
-    font-size: 8vw;
+    font-size: 6vw;
     color: rgb(212, 184, 25);
+    margin-bottom: 2vw;
   }
   .about_us .about_us-lower .about_us-mission p {
-    font-size: 5.2vw;
+    font-size: 4vw;
   }
   .about_us .about_us-lower .about_us-vision {
     flex-direction: column;
@@ -237,14 +239,15 @@
     border-radius: 10vw;
   }
   .about_us .about_us-lower .about_us-vision img {
-    width: 20vw;
+    width: 18vw;
   }
   .about_us .about_us-lower .about_us-vision h3 {
-    font-size: 8vw;
+    font-size: 6vw;
     color: rgb(212, 184, 25);
+    margin-bottom: 2vw;
   }
   .about_us .about_us-lower .about_us-vision p {
-    font-size: 5.2vw;
+    font-size: 4vw;
   }
   .about_us .about_us-lower::-webkit-scrollbar {
     display: none;
