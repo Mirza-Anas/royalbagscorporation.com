@@ -169,67 +169,85 @@
     padding: 1vw 0;
   }
   .about_us .about_us-lower {
-    width: 100%;
+    display: flex;
+    width: 100vw;
     margin-top: 5vh;
-    background-color: blue;
-    height: 50vh;
+    align-items: center;
+    height: 80vw;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+  .about_us .about_us-lower hr {
+    display: none;
   }
   .about_us .about_us-lower .about_us-experience {
-    display: none;
     flex-direction: column;
-    width: 100%;
-    height: 35vh;
+    width: 80vw;
+    margin: 0vw 5vw;
+    padding: 10vw 5vw;
+    flex: 0 0 80%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    row-gap: 3%;
+    row-gap: 15%;
+    border-radius: 10vw;
   }
   .about_us .about_us-lower .about_us-experience img {
-    width: 4vw;
+    width: 20vw;
   }
   .about_us .about_us-lower .about_us-experience h3 {
-    font-size: 3vw;
+    font-size: 8vw;
+    color: rgb(212, 184, 25);
   }
   .about_us .about_us-lower .about_us-experience p {
-    font-size: 2.6vw;
+    font-size: 5.2vw;
   }
   .about_us .about_us-lower .about_us-mission {
-    display: none;
     flex-direction: column;
-    width: 100%;
-    height: 35vh;
+    width: 80vw;
+    margin: 0vw 5vw;
+    padding: 10vw 5vw;
+    flex: 0 0 80%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    row-gap: 3%;
+    row-gap: 15%;
+    border-radius: 10vw;
   }
   .about_us .about_us-lower .about_us-mission img {
-    width: 4vw;
+    width: 20vw;
   }
   .about_us .about_us-lower .about_us-mission h3 {
-    font-size: 3vw;
+    font-size: 8vw;
+    color: rgb(212, 184, 25);
   }
   .about_us .about_us-lower .about_us-mission p {
-    font-size: 2.6vw;
+    font-size: 5.2vw;
   }
   .about_us .about_us-lower .about_us-vision {
-    display: none;
     flex-direction: column;
-    width: 100%;
-    height: 35vh;
+    width: 80vw;
+    margin: 0vw 5vw;
+    padding: 10vw 5vw;
+    flex: 0 0 80%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    row-gap: 3%;
+    row-gap: 15%;
+    border-radius: 10vw;
   }
   .about_us .about_us-lower .about_us-vision img {
-    width: 4vw;
+    width: 20vw;
   }
   .about_us .about_us-lower .about_us-vision h3 {
-    font-size: 3vw;
+    font-size: 8vw;
+    color: rgb(212, 184, 25);
   }
   .about_us .about_us-lower .about_us-vision p {
-    font-size: 2.6vw;
+    font-size: 5.2vw;
+  }
+  .about_us .about_us-lower::-webkit-scrollbar {
+    display: none;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -623,8 +641,6 @@ header {
 }
 .about_us .about_us-lower {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .products-main .products-heading {
