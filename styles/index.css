@@ -275,7 +275,7 @@
     background-color: rgb(82, 82, 82);
   }
   .products-main .products-heading {
-    height: 20vh;
+    height: 18vh;
     margin-bottom: 0vh;
   }
   .products-main .products-heading .products-gallery {
@@ -286,10 +286,10 @@
   }
   .products-main .products {
     width: 90%;
+    height: 136vh;
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-top: 1vh;
-    grid-template-rows: repeat(48, 1fr);
+    grid-template-rows: repeat(76, 1fr);
   }
   .products-main .products .products-img1 {
     grid-column: 1/span 14;
@@ -305,7 +305,35 @@
   }
   .products-main .products .products-img4 {
     grid-column: 12/span 13;
-    grid-row: 14/span 10;
+    grid-row: 14/span 12;
+  }
+  .products-main .products .products-img5 {
+    grid-column: 1/span 11;
+    grid-row: 24/span 12;
+  }
+  .products-main .products .products-img6 {
+    grid-column: 12/span 13;
+    grid-row: 26/span 10;
+  }
+  .products-main .products .products-img8 {
+    grid-column: 1/span 11;
+    grid-row: 36/span 12;
+  }
+  .products-main .products .products-img7 {
+    grid-column: 12/span 14;
+    grid-row: 36/span 16;
+  }
+  .products-main .products .products-img9 {
+    grid-column: 1/span 11;
+    grid-row: 48/span 14;
+  }
+  .products-main .products .products-img10 {
+    grid-column: 1/span 25;
+    grid-row: 62/span 14;
+  }
+  .products-main .products .products-img11 {
+    grid-column: 12/span 14;
+    grid-row: 52/span 10;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -846,7 +874,6 @@ header {
 }
 .products-main .products {
   display: grid;
-  height: 90vh;
   grid-template-columns: repeat(24, 1fr);
   column-gap: 0.8vw;
   row-gap: 0.8vw;
@@ -881,6 +908,43 @@ header {
   background-size: 100% 100%;
   background-position: 50% 100%;
   transition: background-size 1.5s;
+}
+.products-main .products .products-img5 {
+  background-image: url("https://thumbs.dreamstime.com/b/yellow-bag-backpack-nature-background-concept-travel-around-world-139450530.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+}
+.products-main .products .products-img6 {
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/025/218/197/small/backpack-filled-with-school-supplies-back-to-school-concept-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.products-main .products .products-img7 {
+  background-image: url("https://i.etsystatic.com/44715755/r/il/a86700/5124046706/il_570xN.5124046706_fp54.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.products-main .products .products-img8 {
+  background-image: url("https://us.123rf.com/450wm/whitebearstudio1/whitebearstudio12105/whitebearstudio1210505070/169490093-school-backpack-and-stationery-in-a-bright-room.jpg?ver=6");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.products-main .products .products-img9 {
+  background-image: url("https://assets.isu.pub/document-structure/230414205152-003ab5e461fba01958d4cd6c2f8d3904/v1/38ed546a5a251e4e97c8f6a5bdba7223.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.products-main .products .products-img10 {
+  background-image: url("https://us.123rf.com/450wm/unicorntrainwreck/unicorntrainwreck2307/unicorntrainwreck230704935/209716452-backpack-and-apple-on-desk-against-blackboard-in-classroom-at-school.jpg?ver=6");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.products-main .products .products-img11 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJMzd5IilsH9oeNmlpaTQ8Xh0pE0LpyqCUj3i8NM7KTYc6hg8ooi-A0sPWLnyFCRxKazo&usqp=CAU");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .products-main .products *:hover {
   background-size: 120% 120%;
