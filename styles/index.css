@@ -343,7 +343,7 @@
   }
   .tech {
     margin-top: 10vw;
-    height: 170vw;
+    height: 175vw;
     width: 100%;
   }
   .tech .techWindow {
@@ -364,7 +364,7 @@
     height: 100%;
     width: 80vw;
     flex: 0 0 100%;
-    z-index: -2;
+    z-index: -5;
   }
   .tech .tech-portrait .tech-1 :nth-child(1) {
     width: 90%;
@@ -388,7 +388,7 @@
     height: 100%;
     width: 80vw;
     flex: 0 0 100%;
-    z-index: -2;
+    z-index: -5;
   }
   .tech .tech-portrait .tech-2 :nth-child(1) {
     width: 90%;
@@ -412,7 +412,7 @@
     height: 100%;
     width: 80vw;
     flex: 0 0 100%;
-    z-index: -2;
+    z-index: -5;
   }
   .tech .tech-portrait .tech-3 :nth-child(1) {
     width: 90%;
