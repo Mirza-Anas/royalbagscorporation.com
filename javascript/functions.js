@@ -66,7 +66,7 @@ $(() => {
             setTimeout(() => {
                 const interval = setInterval(() => {
                     count += 1;
-                    if (count > 5) {
+                    if (count > 1) {
                         clearInterval(interval);
                     }
                     aboutSlide[0].scrollTo({
@@ -80,7 +80,7 @@ $(() => {
             setTimeout(() => {
                 const interval = setInterval(() => {
                     count += 1;
-                    if (count > 5) {
+                    if (count > 1) {
                         clearInterval(interval);
                     }
                     aboutSlide[0].scrollTo({
@@ -94,7 +94,7 @@ $(() => {
             setTimeout(() => {
                 const interval = setInterval(() => {
                     count += 1;
-                    if (count > 3) {
+                    if (count > 1) {
                         clearInterval(interval);
                     }
                     aboutSlide[0].scrollTo({
