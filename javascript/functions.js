@@ -5,6 +5,7 @@ $(() => {
     let leftOrRight = true;
     let aboutCWidth = 0;
     let currentSlide = 0;
+    let abTrigger = 1
 
     const menu = $(".header-navbar-portrait img");
     const submenu = $(".header-navbar-submenu");
@@ -17,6 +18,7 @@ $(() => {
         $(".about_us-mission"),
         $(".about_us-vision"),
     ];
+    const aboutDots = [$("#abdot1"), $("#abdot2"), $("#abdot3")];
 
     // hamburger menu code for mobile portrait
     submenu.css({ display: "none" });
@@ -35,22 +37,28 @@ $(() => {
     };
     const touchMove = (e) => {
         endX = startX - e.touches[0].clientX;
+        abTrigger = 1;
 
         if (endX > 50) {
             aboutFlag = true;
             leftOrRight = true;
+            abTrigger = 2;
         } else if (endX < -50) {
             aboutFlag = true;
             leftOrRight = false;
+            abTrigger = 3;
         } else {
             aboutFlag = false;
             leftOrRight = true;
+            abTrigger = 1;
         }
     };
     const touchEnd = async () => {
         let width = aboutSlide[0].clientWidth;
         const nSlide = Math.ceil(aboutCWidth / width) + 1;
-        let count = 0;
+        if (abTrigger == 2 && currentSlide < 2) currentSlide += 1;
+        if (abTrigger == 3 && currentSlide > 0) currentSlide -= 1;
+        console.log(currentSlide);
 
         if (aboutFlag && leftOrRight) {
             count = 0;
@@ -70,6 +78,13 @@ $(() => {
                     });
                 }, 50);
             }, 600);
+            aboutDots[currentSlide].css({
+                "background-color":"rgb(235, 197, 28)"
+            })
+            aboutDots[currentSlide-1].css({
+                "background-color":"grey"
+            })
+
         } else if (aboutFlag && !leftOrRight) {
             aboutSlide[0].scrollTo({
                 left: width * (nSlide - 2),
@@ -87,6 +102,13 @@ $(() => {
                     });
                 }, 50);
             }, 600);
+
+            aboutDots[currentSlide].css({
+                "background-color":"rgb(235, 197, 28)"
+            })
+            aboutDots[currentSlide+1].css({
+                "background-color":"grey"
+            })
         } else {
             aboutSlide[0].scrollTo({
                 left: width * (nSlide - 1),
