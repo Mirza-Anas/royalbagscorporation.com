@@ -275,6 +275,7 @@
     background-color: rgb(82, 82, 82);
   }
   .products-main .products-heading {
+    width: 100vw;
     height: 18vh;
     margin-bottom: 0vh;
   }
@@ -346,7 +347,7 @@
     grid-column: 1/span 24;
   }
   .tech .tech-heading :nth-child(1) {
-    font-size: 8vw;
+    font-size: 9vw;
   }
   .tech .tech-heading :nth-child(2) {
     font-size: 12vw;
@@ -1061,9 +1062,6 @@ header {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-}
-.tech div img {
-  width: 100%;
 }
 .tech .tech-1 {
   z-index: -2;
