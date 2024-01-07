@@ -32,7 +32,6 @@ $(() => {
     const touchStart = (e) => {
         startX = e.touches[0].clientX;
         aboutCWidth = aboutSlide.scrollLeft();
-        // aboutSlides[2].remove();
     };
     const touchMove = (e) => {
         endX = startX - e.touches[0].clientX;
@@ -47,10 +46,6 @@ $(() => {
             aboutFlag = false;
             leftOrRight = true;
         }
-        aboutSlide[0].scrollTo({
-            left: aboutSlide.scrollLeft(),
-            behavior: "smooth",
-        });
     };
     const touchEnd = async () => {
         let width = aboutSlide[0].clientWidth;
@@ -66,16 +61,12 @@ $(() => {
             setTimeout(() => {
                 aboutSlide[0].scrollTo({
                     left: width * nSlide,
-                    behavior:"smooth"
+                    behavior: "smooth",
                 });
-                const interval = setInterval(() => {
-                    count += 1;
-                    if (count > 1) {
-                        clearInterval(interval);
-                    }
+                setTimeout(() => {
                     aboutSlide[0].scrollTo({
                         left: width * nSlide,
-                        behavior:"smooth"
+                        behavior: "smooth",
                     });
                 }, 50);
             }, 600);
@@ -89,11 +80,7 @@ $(() => {
                     left: width * (nSlide - 2),
                     behavior: "smooth",
                 });
-                const interval = setInterval(() => {
-                    count += 1;
-                    if (count > 1) {
-                        clearInterval(interval);
-                    }
+                setTimeout(() => {
                     aboutSlide[0].scrollTo({
                         left: width * (nSlide - 2),
                         behavior: "smooth",
@@ -110,11 +97,7 @@ $(() => {
                     left: width * (nSlide - 1),
                     behavior: "smooth",
                 });
-                const interval = setInterval(() => {
-                    count += 1;
-                    if (count > 1) {
-                        clearInterval(interval);
-                    }
+                setTimeout(() => {
                     aboutSlide[0].scrollTo({
                         left: width * (nSlide - 1),
                         behavior: "smooth",
@@ -124,10 +107,6 @@ $(() => {
         }
         aboutFlag = false;
         leftOrRight = true;
-        // setTimeout(() => {
-        //     let parent = aboutSlides[0][0].parentNode
-        //     parent.appendChild(aboutSlides[2][0])
-        // },500)
     };
 
     aboutSlide[0].addEventListener("touchstart", touchStart);

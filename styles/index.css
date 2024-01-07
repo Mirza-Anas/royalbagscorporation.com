@@ -373,6 +373,7 @@
     font-size: 4vw;
   }
   .tech .tech-2 {
+    display: none;
     position: absolute;
     width: 80vw;
     margin-top: 30vw;
