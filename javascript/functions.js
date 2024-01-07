@@ -64,6 +64,10 @@ $(() => {
                 behavior: "smooth",
             });
             setTimeout(() => {
+                aboutSlide[0].scrollTo({
+                    left: width * nSlide,
+                    behavior:"smooth"
+                });
                 const interval = setInterval(() => {
                     count += 1;
                     if (count > 1) {
@@ -74,10 +78,17 @@ $(() => {
                         behavior:"smooth"
                     });
                 }, 50);
-            }, 500);
+            }, 600);
         } else if (aboutFlag && !leftOrRight) {
-
+            aboutSlide[0].scrollTo({
+                left: width * (nSlide - 2),
+                behavior: "smooth",
+            });
             setTimeout(() => {
+                aboutSlide[0].scrollTo({
+                    left: width * (nSlide - 2),
+                    behavior: "smooth",
+                });
                 const interval = setInterval(() => {
                     count += 1;
                     if (count > 1) {
@@ -88,10 +99,17 @@ $(() => {
                         behavior: "smooth",
                     });
                 }, 50);
-            }, 500);
+            }, 600);
         } else {
-
+            aboutSlide[0].scrollTo({
+                left: width * (nSlide - 1),
+                behavior: "smooth",
+            });
             setTimeout(() => {
+                aboutSlide[0].scrollTo({
+                    left: width * (nSlide - 1),
+                    behavior: "smooth",
+                });
                 const interval = setInterval(() => {
                     count += 1;
                     if (count > 1) {
@@ -102,7 +120,7 @@ $(() => {
                         behavior: "smooth",
                     });
                 }, 50);
-            }, 500);
+            }, 600);
         }
         aboutFlag = false;
         leftOrRight = true;
