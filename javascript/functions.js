@@ -12,6 +12,7 @@ $(() => {
     const dot1 = $(".dot1");
     const dot2 = $(".dot2");
     const dot3 = $(".dot3");
+    const aboutSlides = [$(".about_us-experience"),$(".about_us-mission"), $(".about_us-vision")]
 
     // hamburger menu code for mobile portrait
     submenu.css({ display: "none" });
@@ -27,6 +28,7 @@ $(() => {
     const touchStart = (e) => {
         startX = e.touches[0].clientX;
         aboutCWidth = aboutSlide.scrollLeft();
+        // aboutSlides[2].remove();
     };
     const touchMove = (e) => {
         endX = startX - e.touches[0].clientX;
@@ -41,11 +43,12 @@ $(() => {
             aboutFlag = false;
             leftOrRight = true;
         }
+        aboutSlide[0].scrollTo({
+            left: aboutSlide.scrollLeft(),
+            behavior: "smooth",
+        });
     };
     const touchEnd = () => {
-        // aboutSlide[0].scrollTo({
-        //     left: aboutSlide.scrollLeft(),
-        // });
         let width = aboutSlide[0].clientWidth;
         const nSlide = Math.ceil(aboutCWidth / width) + 1;
 
@@ -67,13 +70,11 @@ $(() => {
         }
         aboutFlag = false;
         leftOrRight = true;
-
-        // setTimeout(()=>{
-        //     aboutSlide[0].scrollTo({
-        //         left: width * (Math.ceil(aboutSlide.scrollLeft() / width)),
-        //         behavior:"smooth"
-        //     });
-        // },1000)
+        // setTimeout(() => {
+        //     let parent = aboutSlides[0][0].parentNode
+        //     parent.appendChild(aboutSlides[2][0])
+        // },500)
+        
         
     };
 
