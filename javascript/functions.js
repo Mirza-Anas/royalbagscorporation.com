@@ -12,7 +12,11 @@ $(() => {
     const dot1 = $(".dot1");
     const dot2 = $(".dot2");
     const dot3 = $(".dot3");
-    const aboutSlides = [$(".about_us-experience"),$(".about_us-mission"), $(".about_us-vision")]
+    const aboutSlides = [
+        $(".about_us-experience"),
+        $(".about_us-mission"),
+        $(".about_us-vision"),
+    ];
 
     // hamburger menu code for mobile portrait
     submenu.css({ display: "none" });
@@ -48,25 +52,57 @@ $(() => {
             behavior: "smooth",
         });
     };
-    const touchEnd = () => {
+    const touchEnd = async () => {
         let width = aboutSlide[0].clientWidth;
         const nSlide = Math.ceil(aboutCWidth / width) + 1;
+        let count = 0;
 
         if (aboutFlag && leftOrRight) {
+            count = 0;
             aboutSlide[0].scrollTo({
                 left: width * nSlide,
                 behavior: "smooth",
             });
+            setTimeout(() => {
+                const interval = setInterval(() => {
+                    count += 1;
+                    if (count > 5) {
+                        clearInterval(interval);
+                    }
+                    aboutSlide[0].scrollTo({
+                        left: width * nSlide,
+                        behavior:"smooth"
+                    });
+                }, 20);
+            }, 550);
         } else if (aboutFlag && !leftOrRight) {
-            aboutSlide[0].scrollTo({
-                left: width * (nSlide - 2),
-                behavior: "smooth",
-            });
+
+            setTimeout(() => {
+                const interval = setInterval(() => {
+                    count += 1;
+                    if (count > 5) {
+                        clearInterval(interval);
+                    }
+                    aboutSlide[0].scrollTo({
+                        left: width * (nSlide - 2),
+                        behavior: "smooth",
+                    });
+                }, 20);
+            }, 550);
         } else {
-            aboutSlide[0].scrollTo({
-                left: width * (nSlide - 1),
-                behavior: "smooth",
-            });
+
+            setTimeout(() => {
+                const interval = setInterval(() => {
+                    count += 1;
+                    if (count > 5) {
+                        clearInterval(interval);
+                    }
+                    aboutSlide[0].scrollTo({
+                        left: width * (nSlide - 1),
+                        behavior: "smooth",
+                    });
+                }, 100);
+            }, 200);
         }
         aboutFlag = false;
         leftOrRight = true;
@@ -74,8 +110,6 @@ $(() => {
         //     let parent = aboutSlides[0][0].parentNode
         //     parent.appendChild(aboutSlides[2][0])
         // },500)
-        
-        
     };
 
     aboutSlide[0].addEventListener("touchstart", touchStart);
