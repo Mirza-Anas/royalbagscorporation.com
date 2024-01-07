@@ -484,11 +484,11 @@
   }
   .stats .stats-heading h2 {
     margin-top: 70vw;
-    font-size: 28vw;
+    font-size: 85px;
     margin-left: -8vw;
   }
   .stats p {
-    font-size: 18vw;
+    font-size: 49px;
     margin-left: 1vw;
   }
   .stats h6 {
@@ -524,9 +524,11 @@
     justify-content: flex-end;
   }
   .stats .stats-end {
+    margin-top: 15vw;
     grid-column: 1/span 24;
     grid-row: 1/span 24;
     font-size: 52px;
+    color: rgba(0, 0, 0, 0.144);
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -1341,7 +1343,6 @@ header {
   justify-content: center;
   text-align: center;
   font-weight: bolder;
-  line-height: 95%;
   color: rgba(0, 0, 0, 0.088);
   z-index: -1;
 }
