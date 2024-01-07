@@ -73,8 +73,8 @@ $(() => {
                         left: width * nSlide,
                         behavior:"smooth"
                     });
-                }, 20);
-            }, 550);
+                }, 50);
+            }, 500);
         } else if (aboutFlag && !leftOrRight) {
 
             setTimeout(() => {
@@ -87,22 +87,22 @@ $(() => {
                         left: width * (nSlide - 2),
                         behavior: "smooth",
                     });
-                }, 20);
-            }, 550);
+                }, 50);
+            }, 500);
         } else {
 
             setTimeout(() => {
                 const interval = setInterval(() => {
                     count += 1;
-                    if (count > 5) {
+                    if (count > 3) {
                         clearInterval(interval);
                     }
                     aboutSlide[0].scrollTo({
                         left: width * (nSlide - 1),
                         behavior: "smooth",
                     });
-                }, 100);
-            }, 200);
+                }, 50);
+            }, 500);
         }
         aboutFlag = false;
         leftOrRight = true;
