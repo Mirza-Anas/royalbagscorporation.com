@@ -524,10 +524,9 @@
     justify-content: flex-end;
   }
   .stats .stats-end {
-    margin-top: 32vw;
     grid-column: 1/span 24;
     grid-row: 1/span 24;
-    font-size: 16vw;
+    font-size: 52px;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
