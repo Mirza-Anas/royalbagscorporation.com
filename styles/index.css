@@ -1,7 +1,7 @@
 @media screen and (max-aspect-ratio: 1/1) {
   body {
-    width: 100vw;
-    overflow-x: hidden;
+    width: 100%;
+    overflow-x: hidden !important;
   }
   .header1 {
     height: 6vh;
@@ -549,7 +549,7 @@
     text-shadow: 0.3vw 0.3vw 10px rgb(46, 46, 46);
   }
   .clients .clients-heading hr {
-    border: 1vw solid rgb(255, 255, 255);
+    border: 0.1vw solid rgb(255, 255, 255);
   }
   .clients .clients-logo {
     display: none;
@@ -580,7 +580,7 @@
     display: none;
   }
   .contact_us {
-    height: 180vw;
+    height: 190vw;
     margin: 10vh 0;
   }
   .contact_us .contact_us-content {
@@ -591,37 +591,37 @@
   }
   .contact_us .contact_us-content h2 {
     font-size: 7vw;
-    margin-top: 2vw;
   }
   .contact_us .contact_us-content .contact_us-address {
+    width: 80%;
     margin-top: 2vw;
-    font-size: 2.2vw;
+    font-size: 2.8vw;
     text-align: center;
   }
   .contact_us .contact_us-content .contact_us-address img {
-    width: 2.4vw;
+    width: 4vw;
   }
   .contact_us .contact_us-content .contact_us-mail {
     margin-top: 2vw;
-    font-size: 2.2vw;
+    font-size: 3.2vw;
     text-align: center;
   }
   .contact_us .contact_us-content .contact_us-mail img {
-    width: 2.4vw;
+    width: 4vw;
   }
   .contact_us .contact_us-content .contact_us-number {
     margin-top: 2vw;
-    font-size: 2.2vw;
+    font-size: 3.2vw;
     text-align: center;
   }
   .contact_us .contact_us-content .contact_us-number img {
-    width: 2.4vw;
+    width: 4vw;
   }
   .contact_us .contact_us-content .contact_us-socials {
     margin-top: 4vw;
   }
   .contact_us .contact_us-content .contact_us-socials h4 {
-    font-size: 2.6vw;
+    font-size: 4vw;
   }
   .contact_us .contact_us-content .contact_us-socials div {
     column-gap: 6vw;
@@ -678,6 +678,9 @@
     margin-top: 4vw;
     border-radius: 2vw;
     font-size: 4.3vw;
+  }
+  .copyright {
+    font-size: 4vw;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -1368,6 +1371,17 @@
     background-color: rgb(236, 210, 58);
     cursor: pointer;
   }
+  .copyright {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-left: 2%;
+    font-size: 1.3vw;
+    width: 98%;
+    height: 4vh;
+    color: rgb(0, 0, 0);
+    background-color: rgb(201, 201, 201);
+  }
 }
 @font-face {
   font-family: "GreatVibes";
@@ -1776,9 +1790,6 @@ header {
   display: flex;
   align-items: center;
 }
-.contact_us .contact_us-content .contact_us-mail img {
-  width: 2vw;
-}
 .contact_us .contact_us-content .contact_us-mail p {
   margin-left: 1.5vw;
   margin-right: 2vw;
@@ -1787,9 +1798,6 @@ header {
   display: flex;
   align-items: center;
   margin-left: 1.5vw;
-}
-.contact_us .contact_us-content .contact_us-number img {
-  width: 2vw;
 }
 .contact_us .contact_us-content .contact_us-number p {
   margin-left: 1.5vw;
@@ -1859,7 +1867,6 @@ header {
   text-align: center;
   align-items: center;
   padding-left: 2%;
-  font-size: 1.3vw;
   width: 98%;
   height: 4vh;
   color: rgb(0, 0, 0);
