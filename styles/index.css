@@ -581,8 +581,7 @@
   }
   .contact_us {
     height: 180vw;
-    background-color: blue;
-    margin: 5vh 0;
+    margin: 10vh 0;
   }
   .contact_us .contact_us-content {
     grid-column: 5/span 16;
@@ -633,7 +632,52 @@
   }
   .contact_us .contact_us-form {
     grid-column: 3/span 20;
-    grid-row: 5/span 20;
+    grid-row: 7/span 20;
+    justify-content: center;
+  }
+  .contact_us .contact_us-form .contact-form-div {
+    width: 90%;
+    margin-top: 10vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact_us .contact_us-form .contact-form-div h4 {
+    font-size: 8vw;
+    text-align: center;
+  }
+  .contact_us .contact_us-form .contact-form-div p {
+    margin-top: 2vw;
+    font-size: 2.7vw;
+  }
+  .contact_us .contact_us-form form {
+    margin-top: 8vw;
+  }
+  .contact_us .contact_us-form form input[type=text] {
+    width: 98%;
+    height: 8vw;
+    border-radius: 0.8vw;
+    font-size: 4vw;
+    padding-left: 2%;
+  }
+  .contact_us .contact_us-form form input[type=text]::placeholder {
+    font-size: 4vw;
+  }
+  .contact_us .contact_us-form #form-mail {
+    margin-top: 4vw;
+  }
+  .contact_us .contact_us-form textarea {
+    margin-top: 4vw;
+    padding-top: 2vw;
+    width: 98%;
+    padding-left: 2%;
+    border-radius: 0.8vw;
+    font-size: 4vw;
+  }
+  .contact_us .contact_us-form input[type=submit] {
+    padding: 2vw 4vw;
+    margin-top: 4vw;
+    border-radius: 2vw;
+    font-size: 4.3vw;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -1776,53 +1820,24 @@ header {
 .contact_us .contact_us-form .contact-form-div {
   display: flex;
   flex-direction: column;
-  height: 90%;
-  width: 65%;
-  margin-left: 30%;
 }
 .contact_us .contact_us-form .contact-form-div h4 {
-  margin-top: 2vh;
-  margin-left: 2vw;
-  font-size: 2.7vw;
   text-shadow: 0.1vw 0.1vw 5px gray;
 }
-.contact_us .contact_us-form .contact-form-div p {
-  margin-left: 2vw;
-  margin-top: 1vh;
-  font-size: 1.2vw;
-}
 .contact_us .contact_us-form .contact-form-div form {
-  margin-top: 4.5vh;
   z-index: 1;
 }
 .contact_us .contact_us-form .contact-form-div form input[type=text] {
-  margin-left: 2vw;
-  width: 90%;
-  height: 6vh;
   background-color: white;
   border: none;
-  border-radius: 0.3vw;
-  padding-left: 1vw;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.2vw;
 }
 .contact_us .contact_us-form .contact-form-div form input[type=text]::placeholder {
-  font-size: 1.2vw;
   font-family: "Times New Roman", Times, serif;
-}
-.contact_us .contact_us-form .contact-form-div #form-mail {
-  margin-top: 4vh;
 }
 .contact_us .contact_us-form .contact-form-div textarea {
-  margin-top: 4vh;
-  padding-top: 1vh;
-  width: 90%;
-  margin-left: 2vw;
-  padding-left: 1vw;
   border: none;
-  border-radius: 0.3vw;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.2vw;
 }
 .contact_us .contact_us-form .contact-form-div #form-message:focus {
   outline: none;
@@ -1833,12 +1848,7 @@ header {
   border: 1px solid rgb(63, 63, 63);
 }
 .contact_us .contact_us-form .contact-form-div input[type=submit] {
-  padding: 0.8vh 1vw;
-  border-radius: 4vw;
   border: 1px solid black;
-  margin-left: 2.2vw;
-  margin-top: 2vh;
-  font-size: 1.1vw;
   font-family: "Times New Roman", Times, serif;
   background-color: rgb(236, 210, 58);
   cursor: pointer;
