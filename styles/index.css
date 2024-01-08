@@ -530,6 +530,7 @@
     grid-row: 1/span 24;
     font-size: 16vw;
     color: rgba(0, 0, 0, 0.068);
+    overflow: hidden;
   }
   .clients {
     grid-template-columns: repeat(26, 1fr);
