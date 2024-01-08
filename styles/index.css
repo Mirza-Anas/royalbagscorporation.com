@@ -529,7 +529,7 @@
     grid-column: 1/span 24;
     grid-row: 1/span 24;
     font-size: 16vw;
-    color: rgba(0, 0, 0, 0.144);
+    color: rgba(0, 0, 0, 0.068);
   }
   .clients {
     grid-template-columns: repeat(26, 1fr);
