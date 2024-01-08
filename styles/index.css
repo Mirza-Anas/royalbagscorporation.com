@@ -549,22 +549,32 @@
     text-shadow: 0.3vw 0.3vw 10px rgb(46, 46, 46) hr;
     text-shadow-border: 0.05vw solid rgb(255, 255, 255);
   }
-  .clients .clients-sargam {
-    grid-column: 3/span 6;
-    grid-row: 6/span 5;
-  }
-  .clients .clients-sapat {
-    grid-column: 11/span 6;
-    grid-row: 6/span 5;
-  }
-  .clients .clients-maharaja {
-    grid-column: 19/span 6;
-    grid-row: 6/span 5;
-  }
-  .clients .clients-camel-tea {
+  .clients .clients-logo {
     display: none;
   }
-  .clients .clients-sanan-group {
+  .clients .clients-carousel {
+    grid-column: 1/span 28;
+    grid-row: 4/span 9;
+    overflow-x: scroll;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+  }
+  .clients .clients-carousel div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 1vw;
+    width: 40%;
+    height: 70%;
+    flex: 0 0 40%;
+    margin: 0 5%;
+  }
+  .clients .clients-carousel div img {
+    width: 70%;
+  }
+  .clients .clients-carousel::-webkit-scrollbar {
     display: none;
   }
 }
@@ -1086,6 +1096,9 @@
     background-color: white;
     border-radius: 1vw;
   }
+  .clients .clients-carousel {
+    display: none;
+  }
 }
 @font-face {
   font-family: "GreatVibes";
@@ -1450,9 +1463,6 @@ header {
   display: grid;
   width: 100%;
 }
-.clients div img {
-  width: 70%;
-}
 .clients .clients-image {
   position: absolute;
   width: 100%;
@@ -1466,27 +1476,6 @@ header {
   color: rgb(255, 255, 255);
   text-align: center;
   font-weight: bolder;
-}
-.clients .clients-sargam {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 1vw;
-}
-.clients .clients-sapat {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 1vw;
-}
-.clients .clients-maharaja {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 1vw;
 }
 
 .contact_us {
