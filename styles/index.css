@@ -484,31 +484,32 @@
   }
   .stats .stats-heading h2 {
     margin-top: 70vw;
-    font-size: 85px;
-    margin-left: -8vw;
+    font-size: 24vw;
+    margin-left: -5vw;
   }
   .stats p {
-    font-size: 49px;
-    margin-left: 1vw;
+    font-size: 15vw;
   }
   .stats h6 {
     font-size: 3.2vw;
-    margin-left: 1vw;
   }
   .stats .stats-projects {
     grid-column: 7/span 9;
     grid-row: 1/span 8;
     justify-content: flex-end;
+    align-items: center;
   }
   .stats .stats-clients {
     grid-column: 16/span 9;
     grid-row: 1/span 8;
     justify-content: flex-end;
+    align-items: center;
   }
   .stats .stats-yoe {
     grid-column: 7/span 9;
     grid-row: 9/span 8;
     justify-content: flex-end;
+    align-items: center;
   }
   .stats .stats-yoe h6 {
     font-size: 2.5vw;
@@ -527,8 +528,44 @@
     margin-top: 15vw;
     grid-column: 1/span 24;
     grid-row: 1/span 24;
-    font-size: 52px;
+    font-size: 16vw;
     color: rgba(0, 0, 0, 0.144);
+  }
+  .clients {
+    grid-template-columns: repeat(26, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 50vw;
+    margin-top: 10vh;
+  }
+  .clients .clients-image {
+    height: 50vw;
+    background-size: cover;
+    background-position: center;
+  }
+  .clients .clients-heading {
+    grid-column: 4/span 20;
+    grid-row: 1/span 4;
+    font-size: 5vw;
+    text-shadow: 0.3vw 0.3vw 10px rgb(46, 46, 46) hr;
+    text-shadow-border: 0.05vw solid rgb(255, 255, 255);
+  }
+  .clients .clients-sargam {
+    grid-column: 3/span 6;
+    grid-row: 6/span 5;
+  }
+  .clients .clients-sapat {
+    grid-column: 11/span 6;
+    grid-row: 6/span 5;
+  }
+  .clients .clients-maharaja {
+    grid-column: 19/span 6;
+    grid-row: 6/span 5;
+  }
+  .clients .clients-camel-tea {
+    display: none;
+  }
+  .clients .clients-sanan-group {
+    display: none;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -914,7 +951,6 @@
     margin-top: 15vh;
     margin-left: 14%;
     margin-right: 7%;
-    display: grid;
     grid-template-columns: repeat(22, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: 70vh;
@@ -926,74 +962,129 @@
     border-top: 0.5vw solid rgb(209, 185, 49);
   }
   .stats .stats-heading h2 {
-    transform: rotate(270deg);
-    transform-origin: left top 0;
     margin-top: 63vh;
     margin-left: -8vh;
     font-size: 14vw;
-    color: rgb(97, 97, 97);
   }
   .stats p {
     font-size: 11vw;
-    font-weight: bolder;
-    line-height: 80%;
-    color: rgb(97, 97, 97);
   }
   .stats h6 {
-    padding-top: -3vw;
-    font-weight: bolder;
-    color: rgb(0, 0, 0);
     font-size: 1.25vw;
   }
   .stats .stats-projects {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     grid-column: 5/span 6;
     grid-row: 1/span 2;
   }
   .stats .stats-clients {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     grid-column: 11/span 6;
     grid-row: 1/span 2;
   }
   .stats .stats-yoe {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     grid-column: 16/span 6;
     grid-row: 1/span 2;
   }
   .stats .stats-team {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-column: 5/span 9;
     grid-row: 3/span 2;
   }
   .stats .stats-workshops {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-column: 13/span 6;
     grid-row: 3/span 2;
   }
   .stats .stats-end {
-    display: flex;
     grid-column: 4/span 18;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     font-size: 10vw;
-    font-weight: bolder;
     grid-row: 1/span 4;
     line-height: 95%;
     color: rgba(0, 0, 0, 0.088);
-    z-index: -1;
+  }
+  .clients {
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 60vh;
+    width: 100%;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+  }
+  .clients div img {
+    width: 70%;
+  }
+  .clients .clients-image {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    background-image: url(../images/client_logo/sewing_machine.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .clients .clients-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 7/span 9;
+    grid-row: 1/span 2;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 3vw;
+    text-shadow: 0.1vw 0.1vw 10px rgb(46, 46, 46);
+    font-weight: bolder;
+  }
+  .clients .clients-heading hr {
+    border: 0.1vw solid rgb(255, 255, 255);
+  }
+  .clients .clients-sargam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/span 3;
+    grid-row: 3/span 2;
+    background-color: white;
+    border-radius: 1vw;
+  }
+  .clients .clients-sapat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 6/span 3;
+    grid-row: 3/span 2;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vw;
+  }
+  .clients .clients-maharaja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 10/span 3;
+    grid-row: 3/span 2;
+    background-color: white;
+    border-radius: 1vw;
+  }
+  .clients .clients-camel-tea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 14/span 3;
+    grid-row: 3/span 2;
+    background-color: white;
+    border-radius: 1vw;
+  }
+  .clients .clients-sanan-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 18/span 3;
+    grid-row: 3/span 2;
+    background-color: white;
+    border-radius: 1vw;
   }
 }
 @font-face {
@@ -1332,10 +1423,12 @@ header {
 .stats .stats-team {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .stats .stats-workshops {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .stats .stats-end {
   display: flex;
@@ -1343,7 +1436,6 @@ header {
   justify-content: center;
   text-align: center;
   font-weight: bolder;
-  color: rgba(0, 0, 0, 0.088);
   z-index: -1;
 }
 
@@ -1356,12 +1448,7 @@ header {
 
 .clients {
   display: grid;
-  grid-template-columns: repeat(21, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  height: 60vh;
   width: 100%;
-  margin-top: 15vh;
-  margin-bottom: 15vh;
 }
 .clients div img {
   width: 70%;
@@ -1369,32 +1456,21 @@ header {
 .clients .clients-image {
   position: absolute;
   width: 100%;
-  height: 60vh;
   background-image: url(../images/client_logo/sewing_machine.jpg);
-  background-size: cover;
   background-attachment: fixed;
 }
 .clients .clients-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-column: 7/span 9;
-  grid-row: 1/span 2;
   color: rgb(255, 255, 255);
   text-align: center;
-  font-size: 3vw;
-  text-shadow: 0.1vw 0.1vw 10px rgb(46, 46, 46);
   font-weight: bolder;
-}
-.clients .clients-heading hr {
-  border: 0.1vw solid rgb(255, 255, 255);
 }
 .clients .clients-sargam {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: 2/span 3;
-  grid-row: 3/span 2;
   background-color: white;
   border-radius: 1vw;
 }
@@ -1402,8 +1478,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: 6/span 3;
-  grid-row: 3/span 2;
   background-color: rgb(255, 255, 255);
   border-radius: 1vw;
 }
@@ -1411,26 +1485,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: 10/span 3;
-  grid-row: 3/span 2;
-  background-color: white;
-  border-radius: 1vw;
-}
-.clients .clients-camel-tea {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 14/span 3;
-  grid-row: 3/span 2;
-  background-color: white;
-  border-radius: 1vw;
-}
-.clients .clients-sanan-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 18/span 3;
-  grid-row: 3/span 2;
   background-color: white;
   border-radius: 1vw;
 }
