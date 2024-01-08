@@ -546,8 +546,10 @@
     grid-column: 4/span 20;
     grid-row: 1/span 4;
     font-size: 5vw;
-    text-shadow: 0.3vw 0.3vw 10px rgb(46, 46, 46) hr;
-    text-shadow-border: 0.05vw solid rgb(255, 255, 255);
+    text-shadow: 0.3vw 0.3vw 10px rgb(46, 46, 46);
+  }
+  .clients .clients-heading hr {
+    border: 1vw solid rgb(255, 255, 255);
   }
   .clients .clients-logo {
     display: none;
@@ -576,6 +578,62 @@
   }
   .clients .clients-carousel::-webkit-scrollbar {
     display: none;
+  }
+  .contact_us {
+    height: 180vw;
+    background-color: blue;
+    margin: 5vh 0;
+  }
+  .contact_us .contact_us-content {
+    grid-column: 5/span 16;
+    grid-row: 1/span 8;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact_us .contact_us-content h2 {
+    font-size: 7vw;
+    margin-top: 2vw;
+  }
+  .contact_us .contact_us-content .contact_us-address {
+    margin-top: 2vw;
+    font-size: 2.2vw;
+    text-align: center;
+  }
+  .contact_us .contact_us-content .contact_us-address img {
+    width: 2.4vw;
+  }
+  .contact_us .contact_us-content .contact_us-mail {
+    margin-top: 2vw;
+    font-size: 2.2vw;
+    text-align: center;
+  }
+  .contact_us .contact_us-content .contact_us-mail img {
+    width: 2.4vw;
+  }
+  .contact_us .contact_us-content .contact_us-number {
+    margin-top: 2vw;
+    font-size: 2.2vw;
+    text-align: center;
+  }
+  .contact_us .contact_us-content .contact_us-number img {
+    width: 2.4vw;
+  }
+  .contact_us .contact_us-content .contact_us-socials {
+    margin-top: 4vw;
+  }
+  .contact_us .contact_us-content .contact_us-socials h4 {
+    font-size: 2.6vw;
+  }
+  .contact_us .contact_us-content .contact_us-socials div {
+    column-gap: 6vw;
+    margin-top: 4vw;
+  }
+  .contact_us .contact_us-content .contact_us-socials div img {
+    width: 8vw;
+  }
+  .contact_us .contact_us-form {
+    grid-column: 3/span 20;
+    grid-row: 5/span 20;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -1099,6 +1157,173 @@
   .clients .clients-carousel {
     display: none;
   }
+  .contact_us {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    height: 92vh;
+    width: 100%;
+    margin-bottom: 10vh;
+  }
+  .contact_us .contact_us-content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 210, 39);
+    grid-column: 5/span 6;
+    grid-row: 4/span 18;
+    box-shadow: 0.2vw 0.2vw 20px rgb(92, 92, 92);
+    z-index: 3;
+  }
+  .contact_us .contact_us-content h2 {
+    font-size: 3vw;
+    margin-top: 8vh;
+    margin-left: 1.5vw;
+    text-shadow: 0.1vw 0.1vw 5px gray;
+  }
+  .contact_us .contact_us-content .contact_us-address {
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    font-size: 1.2vw;
+    margin-left: 1.5vw;
+  }
+  .contact_us .contact_us-content .contact_us-address img {
+    width: 2vw;
+  }
+  .contact_us .contact_us-content .contact_us-address p {
+    margin-left: 1.5vw;
+    margin-right: 2vw;
+  }
+  .contact_us .contact_us-content .contact_us-mail {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    font-size: 1.2vw;
+    margin-left: 1.5vw;
+  }
+  .contact_us .contact_us-content .contact_us-mail img {
+    width: 2vw;
+  }
+  .contact_us .contact_us-content .contact_us-mail p {
+    margin-left: 1.5vw;
+    margin-right: 2vw;
+  }
+  .contact_us .contact_us-content .contact_us-number {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    font-size: 1.2vw;
+    margin-left: 1.5vw;
+  }
+  .contact_us .contact_us-content .contact_us-number img {
+    width: 2vw;
+  }
+  .contact_us .contact_us-content .contact_us-number p {
+    margin-left: 1.5vw;
+    margin-right: 2vw;
+  }
+  .contact_us .contact_us-content .contact_us-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+  }
+  .contact_us .contact_us-content .contact_us-socials h4 {
+    font-size: 1.3vw;
+    color: rgb(31, 31, 31);
+    text-decoration: underline;
+  }
+  .contact_us .contact_us-content .contact_us-socials div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3vw;
+    margin-top: 3vh;
+  }
+  .contact_us .contact_us-content .contact_us-socials div img {
+    width: 3vw;
+  }
+  .contact_us .contact_us-form {
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+    grid-column: 7/span 14;
+    grid-row: 2/span 22;
+    z-index: 1;
+    box-shadow: 0.1vw 0.1vw 15px rgb(110, 110, 110);
+  }
+  .contact_us .contact_us-form .contact-form-div {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 65%;
+    margin-left: 30%;
+  }
+  .contact_us .contact_us-form .contact-form-div h4 {
+    margin-top: 2vh;
+    margin-left: 2vw;
+    font-size: 2.7vw;
+    text-shadow: 0.1vw 0.1vw 5px gray;
+  }
+  .contact_us .contact_us-form .contact-form-div p {
+    margin-left: 2vw;
+    margin-top: 1vh;
+    font-size: 1.2vw;
+  }
+  .contact_us .contact_us-form .contact-form-div form {
+    margin-top: 4.5vh;
+    z-index: 1;
+  }
+  .contact_us .contact_us-form .contact-form-div form input[type=text] {
+    margin-left: 2vw;
+    width: 90%;
+    height: 6vh;
+    background-color: white;
+    border: none;
+    border-radius: 0.3vw;
+    padding-left: 1vw;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2vw;
+  }
+  .contact_us .contact_us-form .contact-form-div form input[type=text]::placeholder {
+    font-size: 1.2vw;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .contact_us .contact_us-form .contact-form-div #form-mail {
+    margin-top: 4vh;
+  }
+  .contact_us .contact_us-form .contact-form-div textarea {
+    margin-top: 4vh;
+    padding-top: 1vh;
+    width: 90%;
+    margin-left: 2vw;
+    padding-left: 1vw;
+    border: none;
+    border-radius: 0.3vw;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2vw;
+  }
+  .contact_us .contact_us-form .contact-form-div #form-message:focus {
+    outline: none;
+    border: 1px solid rgb(63, 63, 63);
+  }
+  .contact_us .contact_us-form .contact-form-div input[type=text]:focus {
+    outline: none;
+    border: 1px solid rgb(63, 63, 63);
+  }
+  .contact_us .contact_us-form .contact-form-div input[type=submit] {
+    padding: 0.8vh 1vw;
+    border-radius: 4vw;
+    border: 1px solid black;
+    margin-left: 2.2vw;
+    margin-top: 2vh;
+    font-size: 1.1vw;
+    font-family: "Times New Roman", Times, serif;
+    background-color: rgb(236, 210, 58);
+    cursor: pointer;
+  }
 }
 @font-face {
   font-family: "GreatVibes";
@@ -1482,7 +1707,6 @@ header {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(24, 1fr);
-  height: 92vh;
   width: 100%;
   margin-bottom: 10vh;
 }
@@ -1490,27 +1714,15 @@ header {
   display: flex;
   flex-direction: column;
   background-color: rgb(240, 210, 39);
-  grid-column: 5/span 6;
-  grid-row: 4/span 18;
   box-shadow: 0.2vw 0.2vw 20px rgb(92, 92, 92);
   z-index: 3;
 }
 .contact_us .contact_us-content h2 {
-  font-size: 3vw;
-  margin-top: 8vh;
-  margin-left: 1.5vw;
   text-shadow: 0.1vw 0.1vw 5px gray;
 }
 .contact_us .contact_us-content .contact_us-address {
-  margin-top: 2vh;
   display: flex;
   align-items: center;
-  height: 8vh;
-  font-size: 1.2vw;
-  margin-left: 1.5vw;
-}
-.contact_us .contact_us-content .contact_us-address img {
-  width: 2vw;
 }
 .contact_us .contact_us-content .contact_us-address p {
   margin-left: 1.5vw;
@@ -1519,9 +1731,6 @@ header {
 .contact_us .contact_us-content .contact_us-mail {
   display: flex;
   align-items: center;
-  height: 8vh;
-  font-size: 1.2vw;
-  margin-left: 1.5vw;
 }
 .contact_us .contact_us-content .contact_us-mail img {
   width: 2vw;
@@ -1533,8 +1742,6 @@ header {
 .contact_us .contact_us-content .contact_us-number {
   display: flex;
   align-items: center;
-  height: 8vh;
-  font-size: 1.2vw;
   margin-left: 1.5vw;
 }
 .contact_us .contact_us-content .contact_us-number img {
@@ -1549,10 +1756,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 3vh;
 }
 .contact_us .contact_us-content .contact_us-socials h4 {
-  font-size: 1.3vw;
   color: rgb(31, 31, 31);
   text-decoration: underline;
 }
@@ -1560,18 +1765,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 3vw;
-  margin-top: 3vh;
-}
-.contact_us .contact_us-content .contact_us-socials div img {
-  width: 3vw;
 }
 .contact_us .contact_us-form {
   display: flex;
   align-items: center;
   background-color: rgb(241, 241, 241);
-  grid-column: 7/span 14;
-  grid-row: 2/span 22;
   z-index: 1;
   box-shadow: 0.1vw 0.1vw 15px rgb(110, 110, 110);
 }
