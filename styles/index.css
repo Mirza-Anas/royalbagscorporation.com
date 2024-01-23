@@ -528,7 +528,7 @@
     margin-top: 15vw;
     grid-column: 1/span 24;
     grid-row: 1/span 24;
-    font-size: 16vw;
+    font-size: 20vw;
     color: rgba(0, 0, 0, 0.068);
     overflow: hidden;
   }
@@ -792,7 +792,9 @@
   }
   .about_us .about_us-upper .about_us-upper-img img {
     margin-right: 8%;
-    width: 70%;
+    margin-top: 2%;
+    width: 63%;
+    filter: brightness(90%) contrast(100%) saturate(120%);
   }
   .about_us .about_us-upper .about_us-upper-content {
     align-items: flex-start;
@@ -810,7 +812,7 @@
     margin-bottom: 1.5vw;
   }
   .about_us .about_us-upper .about_us-upper-content h3 {
-    font-size: 2.3vw;
+    font-size: 1.8vw;
     width: 80%;
     margin-bottom: 1vw;
   }
@@ -1440,15 +1442,30 @@ header {
   height: 100%;
   width: 40%;
 }
-.header1 .header-nav_bar ul {
+.header1 .header-nav_bar ul nav {
   display: flex;
   list-style-type: none;
   column-gap: 1.7vw;
   font-size: 1.4vw;
   font-weight: 500;
 }
-.header1 .header-nav_bar ul li {
+.header1 .header-nav_bar ul nav li {
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.header1 .header-nav_bar ul nav li::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 110%;
+  height: 8%;
+  top: 92%;
+  left: -110%;
+  border-radius: 1vw;
+}
+.header1 .header-nav_bar ul nav #home-button-m::after {
+  left: -5%;
 }
 .header1 .header-social_icons {
   display: flex;
@@ -1460,8 +1477,23 @@ header {
   width: 50%;
   height: 70%;
   justify-content: flex-end;
+  align-items: center;
 }
 
+@keyframes home_button {
+  0% {
+    left: -32%;
+  }
+  80% {
+    left: -32%;
+  }
+  90% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
 .home {
   display: flex;
 }
@@ -1495,10 +1527,37 @@ header {
   border: 0.1vw solid black;
   background-color: rgb(231, 204, 50);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.home .home-first_half div button::after {
+  position: absolute;
+  transition: 0.5s;
+  content: "";
+  top: 0;
+  background: #fff352;
+  height: 120%;
+  width: 30%;
+  opacity: 0.8;
+  left: -32%;
+  transform: skewX(15deg);
+  z-index: -1;
+  animation: home_button 5s ease-out infinite;
 }
 .home .home-first_half div .home-connect {
   color: white;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(10, 10, 10);
+}
+.home .home-first_half div .home-connect::after {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.2;
+  animation: home_button 5s ease-out 1s infinite;
+}
+.home .home-first_half div button:hover {
+  box-shadow: 2px 2px 8px;
+}
+.home .home-first_half div button:hover::after {
+  left: 100%;
 }
 .home .home-second_half img {
   position: absolute;

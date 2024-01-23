@@ -1,41 +1,89 @@
-$(() => {
-    // about slides
-    let startX = 0;
-    let endX = 0;
-    let aboutFlag = false;
-    let leftOrRight = true;
-    let aboutCWidth = 0;
-    let currentSlide = 0;
-    let abTrigger = 1;
+import handleAboutSlide from "./handleAboutSlide.js";
+import handleTechSlide from "./handleTechSlide.js";
+import scrollToSections from "./scrollToSections.js";
+import { currentSection } from "./headerFunctions.js";
 
-    // tech slides
-    let techStartX = 0;
-    let techEndX = 0;
-    let techFlag = false;
-    let techLeftOrRight = true;
-    let techCWidth = 0;
-    let techCurrentSlide = 0;
-    let techTrigger = 1;
+$(() => {
+    // content
+    const aboutContent =
+        " We majorly deal in manufacturing cotton canvas, woven PP fabric, non-woven melt-blown, and roto fabric bags. Our forte lies in creating visually appealing promotional bags,tailored to captivate a new audience for your business.";
+    const abRmButtom = $("#about-us-read-more-button");
+
+    // about section related
+    const aboutSlide = $(".about_us-lower");
+    const aboutDots = [$("#abdot1"), $("#abdot2"), $("#abdot3")];
+    const abConPara = $("#about-us-main-paragraph");
+
+    // tech section related
+    const techSlide = $(".tech-portrait");
+    const techDots = [$("#tedot1"), $("#tedot2"), $("#tedot3")];
 
     // header related
     const menu = $(".header-navbar-portrait img");
     const submenu = $(".header-navbar-submenu");
 
-    // about section related
-    const aboutSlide = $(".about_us-lower");
-    // const dot1 = $(".dot1");
-    // const dot2 = $(".dot2");
-    // const dot3 = $(".dot3");
-    // const aboutSlides = [
-    //     $(".about_us-experience"),
-    //     $(".about_us-mission"),
-    //     $(".about_us-vision"),
-    // ];
-    const aboutDots = [$("#abdot1"), $("#abdot2"), $("#abdot3")];
+    // elements for scroll
+    const home = $(".home");
+    const homeButton = $("#home-button-m");
+    const homeButtonOne = $(".home-products");
+    const homeButtonTwo = $(".home-connect");
+    const aboutUs = $(".about_us");
+    const aboutUsButton = $("#about-us-m");
+    const gallery = $(".products-main");
+    const galleryButton = $("#gallery-m");
+    const contact = $(".contact_us");
+    const contactButton = $("#contact-m");
 
-    // tech section related
-    const techSlide = $(".tech-portrait");
-    const techDots = [$("#tedot1"), $("#tedot2"), $("#tedot3")];
+    let temp = 400;
+
+    // adding current section underline in nav bar
+    window.addEventListener("scroll",() => {
+        console.log(temp);
+        setTimeout(() => {
+            temp = currentSection(
+                home,
+                homeButton,
+                aboutUs,
+                temp,
+                aboutUsButton,
+                gallery,
+                galleryButton,
+                contact,
+                contactButton
+            );
+        },0)
+    }
+    );
+
+    // adding about us content from read more button
+    const handleAbcontent = () => {
+        const clength = aboutContent.length;
+        let count = 0;
+        abRmButtom.prop("disabled", true);
+        const interval = setInterval(() => {
+            if (count == clength) {
+                abRmButtom.text("Thanks for reading :)");
+                clearInterval(interval);
+            }
+            abConPara.append(aboutContent[count]);
+            count += 1;
+        }, 8);
+    };
+    abRmButtom.click(() => handleAbcontent());
+
+    // adding workflow to the navigation buttons
+    scrollToSections(
+        home,
+        homeButton,
+        homeButtonOne,
+        homeButtonTwo,
+        aboutUs,
+        aboutUsButton,
+        gallery,
+        galleryButton,
+        contact,
+        contactButton
+    );
 
     // hamburger menu code for mobile portrait
     submenu.css({ display: "none" });
@@ -47,209 +95,9 @@ $(() => {
         }
     });
 
-    // about slides code carousel
-    const touchStart = (e) => {
-        startX = e.touches[0].clientX;
-        aboutCWidth = aboutSlide.scrollLeft();
-    };
-    const touchMove = (e) => {
-        endX = startX - e.touches[0].clientX;
-        abTrigger = 1;
+    // make about us below section slideable in phone
+    handleAboutSlide(aboutSlide, aboutDots);
 
-        if (endX > 50) {
-            aboutFlag = true;
-            leftOrRight = true;
-            abTrigger = 2;
-        } else if (endX < -50) {
-            aboutFlag = true;
-            leftOrRight = false;
-            abTrigger = 3;
-        } else {
-            aboutFlag = false;
-            leftOrRight = true;
-            abTrigger = 1;
-        }
-    };
-    const touchEnd = () => {
-        let width = aboutSlide[0].clientWidth;
-        const nSlide = Math.ceil(aboutCWidth / width) + 1;
-        if (abTrigger == 2 && currentSlide < 2) currentSlide += 1;
-        if (abTrigger == 3 && currentSlide > 0) currentSlide -= 1;
-        console.log(currentSlide);
-
-        if (aboutFlag && leftOrRight) {
-            count = 0;
-            aboutSlide[0].scrollTo({
-                left: width * nSlide,
-                behavior: "smooth",
-            });
-            setTimeout(() => {
-                aboutSlide[0].scrollTo({
-                    left: width * nSlide,
-                    behavior: "smooth",
-                });
-                setTimeout(() => {
-                    aboutSlide[0].scrollTo({
-                        left: width * nSlide,
-                        behavior: "smooth",
-                    });
-                }, 50);
-            }, 600);
-            aboutDots[currentSlide].css({
-                "background-color": "rgb(235, 197, 28)",
-            });
-            aboutDots[currentSlide - 1].css({
-                "background-color": "grey",
-            });
-        } else if (aboutFlag && !leftOrRight) {
-            aboutSlide[0].scrollTo({
-                left: width * (nSlide - 2),
-                behavior: "smooth",
-            });
-            setTimeout(() => {
-                aboutSlide[0].scrollTo({
-                    left: width * (nSlide - 2),
-                    behavior: "smooth",
-                });
-                setTimeout(() => {
-                    aboutSlide[0].scrollTo({
-                        left: width * (nSlide - 2),
-                        behavior: "smooth",
-                    });
-                }, 50);
-            }, 600);
-
-            aboutDots[currentSlide].css({
-                "background-color": "rgb(235, 197, 28)",
-            });
-            aboutDots[currentSlide + 1].css({
-                "background-color": "grey",
-            });
-        } else {
-            aboutSlide[0].scrollTo({
-                left: width * (nSlide - 1),
-                behavior: "smooth",
-            });
-            setTimeout(() => {
-                aboutSlide[0].scrollTo({
-                    left: width * (nSlide - 1),
-                    behavior: "smooth",
-                });
-                setTimeout(() => {
-                    aboutSlide[0].scrollTo({
-                        left: width * (nSlide - 1),
-                        behavior: "smooth",
-                    });
-                }, 50);
-            }, 600);
-        }
-        aboutFlag = false;
-        leftOrRight = true;
-    };
-
-    aboutSlide[0].addEventListener("touchstart", touchStart);
-    aboutSlide[0].addEventListener("touchmove", touchMove);
-    aboutSlide[0].addEventListener("touchend", touchEnd);
-
-    const techTouchStart = (e) => {
-        techStartX = e.touches[0].clientX;
-        techCWidth = techSlide.scrollLeft();
-    };
-    const techTouchMove = (e) => {
-        techEndX = techStartX - e.touches[0].clientX;
-        techTrigger = 1;
-
-        if (techEndX > 50) {
-            techFlag = true;
-            techLeftOrRight = true;
-            techTrigger = 2;
-        } else if (techEndX < -50) {
-            techFlag = true;
-            techLeftOrRight = false;
-            techTrigger = 3;
-        } else {
-            techFlag = false;
-            techLeftOrRight = true;
-            techTrigger = 1;
-        }
-    };
-    const techTouchEnd = () => {
-        let width = techSlide[0].clientWidth;
-        const nSlide = Math.ceil(techCWidth / width) + 1;
-        if (techTrigger == 2 && techCurrentSlide < 2) techCurrentSlide += 1;
-        if (techTrigger == 3 && techCurrentSlide > 0) techCurrentSlide -= 1;
-        console.log(techCurrentSlide);
-
-        if (techFlag && techLeftOrRight) {
-            count = 0;
-            techSlide[0].scrollTo({
-                left: width * nSlide,
-                behavior: "smooth",
-            });
-            setTimeout(() => {
-                techSlide[0].scrollTo({
-                    left: width * nSlide,
-                    behavior: "smooth",
-                });
-                setTimeout(() => {
-                    techSlide[0].scrollTo({
-                        left: width * nSlide,
-                        behavior: "smooth",
-                    });
-                }, 50);
-            }, 600);
-            techDots[techCurrentSlide].css({
-                "background-color": "rgb(235, 197, 28)",
-            });
-            techDots[techCurrentSlide - 1].css({
-                "background-color": "grey",
-            });
-        } else if (techFlag && !techLeftOrRight) {
-            techSlide[0].scrollTo({
-                left: width * (nSlide - 2),
-                behavior: "smooth",
-            });
-            setTimeout(() => {
-                techSlide[0].scrollTo({
-                    left: width * (nSlide - 2),
-                    behavior: "smooth",
-                });
-                setTimeout(() => {
-                    techSlide[0].scrollTo({
-                        left: width * (nSlide - 2),
-                        behavior: "smooth",
-                    });
-                }, 50);
-            }, 600);
-
-            techDots[techCurrentSlide].css({
-                "background-color": "rgb(235, 197, 28)",
-            });
-            techDots[techCurrentSlide + 1].css({
-                "background-color": "grey",
-            });
-        } else {
-            techSlide[0].scrollTo({
-                left: width * (nSlide - 1),
-                behavior: "smooth",
-            });
-            setTimeout(() => {
-                techSlide[0].scrollTo({
-                    left: width * (nSlide - 1),
-                    behavior: "smooth",
-                });
-                setTimeout(() => {
-                    techSlide[0].scrollTo({
-                        left: width * (nSlide - 1),
-                        behavior: "smooth",
-                    });
-                }, 50);
-            }, 600);
-        }
-        techFlag = false;
-        techLeftOrRight = true;
-    };
-    techSlide[0].addEventListener("touchstart", techTouchStart);
-    techSlide[0].addEventListener("touchmove", techTouchMove);
-    techSlide[0].addEventListener("touchend", techTouchEnd);
+    // make tech section slideable in phone
+    handleTechSlide(techSlide, techDots);
 });

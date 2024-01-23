@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles/index.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="./javascript/functions.js"></script>
+        <script type="module" src="./javascript/functions.js">
+        </script>
         <title>RBC</title>
     </head>
     <body>
@@ -21,27 +22,30 @@
                     </div> -->
                 </div>
                 <div class="header-nav_bar">
+                    
                     <ul>
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>Product Gallery</li>
-                        <li>Contact Us</li>
+                        <nav>
+                        <li id="home-button-m" tabindex="0">Home</li>
+                        <li id="about-us-m" tabindex="0">About Us</li>
+                        <li id="gallery-m" tabindex="0">Product Gallery</li>
+                        <li id="contact-m" tabindex="0">Contact Us</li>
+                        </nav>
                     </ul>
                     <div class="header-navbar-portrait">
                         <img src="./images/header/menu.png" alt="hamburger_menu" />
                         <div class="header-navbar-submenu">
-                            <div>Home</div>
-                            <div>About</div>
-                            <div>Product Gallery</div>
-                            <div>Contact Us</div>
+                            <div id="home-button-p">Home</div>
+                            <div id="about-us-p">About</div>
+                            <div id="gallery-p">Product Gallery</div>
+                            <div id="contact-p">Contact Us</div>
                         </div>
                     </div>
                 </div>
                 <div class="header-social_icons">
                     <div>
-                        <img src="./images/facebook.svg" alt="facebook" />
-                        <img src="./images/instagram.svg" alt="instagram" />
-                        <img src="./images/linkedin.svg" alt="linkedIn" />
+                        <a href="https://www.facebook.com/threadbags?mibextid=kFxxJD" target="_blank"><img src="./images/facebook.svg" alt="facebook" /></a>
+                        <a href="https://instagram.com/thread_bags?igshid=YzAwZjE1ZTI0Zg==" target="_blank"><img src="./images/instagram.svg" alt="instagram" /></a>
+                        <a href="https://in.linkedin.com/company/threadbags" target="_blank"><img src="./images/linkedin.svg" alt="linkedIn" /></a>
                     </div>
                 </div>
             </div>
@@ -85,7 +89,7 @@
                 <div class="about_us-upper">
                     <div class="about_us-upper-img">
                         <img
-                            src="./images/about_us/old_man_img.jpeg"
+                            src="./images/about_us/sayyed_ahmed_ali.png"
                             alt="old_man_img"
                         />
                     </div>
@@ -96,24 +100,15 @@
                         </div>
                         <hr />
                         <h3>
-                            Royal Bags Corporation Established in the year 1971
-                            by Lorem ipsum dolor it was his vision which got us
-                            this far.
+                            Royal Bags Corporation established in the year 1971 by Sayyed Ahmad Ali, it was the first manufacturing unit of promotional and packing bags in the heart of Madhya Pradesh INDORE.
+                            
                         </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Iste aperiam esse itaque, sint reiciendis
-                            deleniti, nobis ex mollitia fugit doloremque numquam
-                            eligendi. Praesentium nam eos harum architecto magni
-                            labore recusandae! Facere, dolorum fuga! Laboriosam
-                            ullam, explicabo, cum itaque quam debitis saepe
-                            aliquid ratione a autem optio? Unde, suscipit
-                            explicabo? Qui laudantium dicta laboriosam voluptas
-                            odio autem nostrum? Nesciunt nam odio blanditiis
-                            debitis ad natus laborum enim quam voluptatibus
-                            tenetur....
+                        <p>He started with the aim of providing efficient and smart promotional means to the growing business of Indore and to generate employment for women and needy. RBC gained enormous popularity from the renowned brands under his leadership.</p>
+                        <br>    
+                        <p id="about-us-main-paragraph">
+                            Adapting to the dynamic landscape of time, technology, and customer preferences, today we manufacture over 100 thousand bags monthly. We excel in delivering top-notch printing, tested strength, and durability in our bags through production expertise, skilled labor, and advanced machinery. 
                         </p>
-                        <button>Read More</button>
+                        <button id="about-us-read-more-button">Read More</button>
                     </div>
                 </div>
                 <div class="about_us-lower">
@@ -125,10 +120,7 @@
                         <!-- https://www.flaticon.com/free-icon/expertise_9874840?k=1703325379605&log-in=google -->
                         <h3>Experience</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus, delectus. Nemo iure ipsa
-                            veritatis quaerat ut. Quod ipsam neque molestias
-                            voluptate excepturi sint reiciendis blanditiis?
+                            with the experience of over 50 years in the craft of manufacturing top-tier promotional bags, our journey reflects a rich legacy of commitment and excellence.
                         </p>
                     </div>
                     <hr />
