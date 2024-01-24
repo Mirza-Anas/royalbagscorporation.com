@@ -4,6 +4,10 @@ import scrollToSections from "./scrollToSections.js";
 import { currentSection } from "./headerFunctions.js";
 
 $(() => {
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
     // content
     const aboutContent =
         " We majorly deal in manufacturing cotton canvas, woven PP fabric, non-woven melt-blown, and roto fabric bags. Our forte lies in creating visually appealing promotional bags,tailored to captivate a new audience for your business.";
@@ -41,13 +45,9 @@ $(() => {
         setTimeout(() => {
             currentSection(
                 home,
-                homeButton,
                 aboutUs,
-                aboutUsButton,
                 gallery,
-                galleryButton,
                 contact,
-                contactButton
             );
         }, 0);
     });
