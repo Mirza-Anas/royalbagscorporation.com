@@ -1454,7 +1454,7 @@ header {
   position: relative;
   overflow: hidden;
 }
-.header1 .header-nav_bar ul nav li::after {
+.header1 .header-nav_bar ul nav li div {
   position: absolute;
   content: "";
   background-color: black;
@@ -1464,7 +1464,7 @@ header {
   left: -110%;
   border-radius: 1vw;
 }
-.header1 .header-nav_bar ul nav #home-button-m::after {
+.header1 .header-nav_bar ul nav #home-button-m div {
   left: -5%;
 }
 .header1 .header-social_icons {
@@ -1559,12 +1559,29 @@ header {
 .home .home-first_half div button:hover::after {
   left: 100%;
 }
+.home .home-second_half {
+  overflow: hidden;
+}
 .home .home-second_half img {
   position: absolute;
+  transform-origin: 50% 0%;
+  animation: swinging_bag 2s ease-in-out infinite;
+  overflow: hidden;
+}
+@keyframes swinging_bag {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
 }
 .home .home-second_half .home-promotion_img {
   opacity: 0;
-  animation: imgOpacity 2s ease-in-out 1s 1 normal forwards;
+  animation: imgOpacity 2s ease-in-out 1s 1 normal forwards, swinging_bag 2s ease-in-out infinite;
 }
 @keyframes imgOpacity {
   0% {

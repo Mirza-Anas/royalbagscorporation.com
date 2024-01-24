@@ -37,23 +37,20 @@ $(() => {
     let temp = 400;
 
     // adding current section underline in nav bar
-    window.addEventListener("scroll",() => {
-        console.log(temp);
+    window.addEventListener("scroll", () => {
         setTimeout(() => {
-            temp = currentSection(
+            currentSection(
                 home,
                 homeButton,
                 aboutUs,
-                temp,
                 aboutUsButton,
                 gallery,
                 galleryButton,
                 contact,
                 contactButton
             );
-        },0)
-    }
-    );
+        }, 0);
+    });
 
     // adding about us content from read more button
     const handleAbcontent = () => {
