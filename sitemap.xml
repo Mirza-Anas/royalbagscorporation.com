@@ -1,0 +1,33 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <url>
+    <loc>https://mirza-anas.github.io/royalbagscorporation.com/</loc>
+    <lastmod>2024-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mirza-anas.github.io/royalbagscorporation.com/#home</loc>
+    <lastmod>2024-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://mirza-anas.github.io/royalbagscorporation.com/#about-us</loc>
+    <lastmod>2024-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://mirza-anas.github.io/royalbagscorporation.com/#promotional-bags</loc>
+    <lastmod>2024-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://mirza-anas.github.io/royalbagscorporation.com/#contact-us</loc>
+    <lastmod>2024-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <!-- Add more sections as needed -->
+</urlset>
