@@ -1,7 +1,7 @@
 let currentButton = "home";
 let currentId = $("#home-button-m");
 
-const navAnimateRight = (fromButton, toButton, current) => {
+const navAnimateRight = (fromButton, toButton, current, stringName) => {
     // for about animation
     fromButton.animate(
         {
@@ -23,9 +23,10 @@ const navAnimateRight = (fromButton, toButton, current) => {
         }
     );
     currentButton = current;
+    history.pushState(null, "", stringName);
 };
 
-const navAnimateLeft = (fromButton, toButton, current) => {
+const navAnimateLeft = (fromButton, toButton, current, stringName) => {
     // for about animation
     fromButton.animate(
         {
@@ -47,6 +48,7 @@ const navAnimateLeft = (fromButton, toButton, current) => {
         }
     );
     currentButton = current;
+    history.pushState(null, "", stringName);
 };
 
 export const currentSection = (home, aboutUs, gallery, contact) => {
@@ -66,23 +68,38 @@ export const currentSection = (home, aboutUs, gallery, contact) => {
         currentButton === "home" &&
         windowHeight + homePosition < windowHeight / 2
     ) {
-        navAnimateRight(homeButton, aboutButton, "about");
+        navAnimateRight(homeButton, aboutButton, "about", "#about-us");
     } else if (currentButton === "about") {
         if (windowHeight + homePosition > windowHeight / 2) {
-            navAnimateLeft(aboutButton, homeButton, "home");
+            navAnimateLeft(aboutButton, homeButton, "home", "#home");
         } else if (windowHeight - galleryPosition > windowHeight / 2) {
-            navAnimateRight(aboutButton, galleryButton, "gallery");
+            navAnimateRight(
+                aboutButton,
+                galleryButton,
+                "gallery",
+                "#promotional-bags"
+            );
         }
     } else if (currentButton === "gallery") {
         if (windowHeight + aboutPosition > windowHeight / 2) {
-            navAnimateLeft(galleryButton, aboutButton, "about");
+            navAnimateLeft(galleryButton, aboutButton, "about", "#about-us");
         } else if (windowHeight - contactPosition > windowHeight / 2) {
-            navAnimateRight(galleryButton, contactbutton, "contact");
+            navAnimateRight(
+                galleryButton,
+                contactbutton,
+                "contact",
+                "#contact-us"
+            );
         }
     } else if (
         currentButton === "contact" &&
         windowHeight - contactPosition < windowHeight / 2
     ) {
-        navAnimateLeft(contactbutton, galleryButton, "gallery");
+        navAnimateLeft(
+            contactbutton,
+            galleryButton,
+            "gallery",
+            "#promotional-bags"
+        );
     }
 };

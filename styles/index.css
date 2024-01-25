@@ -1449,6 +1449,10 @@ header {
   font-size: 1.4vw;
   font-weight: 500;
 }
+.header1 .header-nav_bar ul nav a {
+  text-decoration: none;
+  color: black;
+}
 .header1 .header-nav_bar ul nav li {
   cursor: pointer;
   position: relative;

@@ -5,9 +5,15 @@ import { currentSection } from "./headerFunctions.js";
 
 $(() => {
     window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    })
+        top: 0,
+        behavior: "smooth",
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+        });
+    });
     // content
     const aboutContent =
         " We majorly deal in manufacturing cotton canvas, woven PP fabric, non-woven melt-blown, and roto fabric bags. Our forte lies in creating visually appealing promotional bags,tailored to captivate a new audience for your business.";
@@ -43,12 +49,7 @@ $(() => {
     // adding current section underline in nav bar
     window.addEventListener("scroll", () => {
         setTimeout(() => {
-            currentSection(
-                home,
-                aboutUs,
-                gallery,
-                contact,
-            );
+            currentSection(home, aboutUs, gallery, contact);
         }, 0);
     });
 
