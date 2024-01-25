@@ -10,7 +10,7 @@ const scrollToSections = (
     contact,
     contactButton
 ) => {
-    const scrollDiv = (object, stringName) => {
+    const scrollDiv = (object) => {
         const rect = object.getBoundingClientRect();
         const divTop = rect.top;
         const goTo = divTop + window.scrollY;
@@ -18,10 +18,9 @@ const scrollToSections = (
             top: goTo - 100,
             behavior: "smooth",
         });
-        history.pushState(null, "", stringName);
     };
 
-    const scrollDivTwo = (object, stringName) => {
+    const scrollDivTwo = (object) => {
         const rect = object.getBoundingClientRect();
         const divTop = rect.top;
         const goTo = divTop + window.scrollY;
@@ -29,15 +28,14 @@ const scrollToSections = (
             top: goTo - 50,
             behavior: "smooth",
         });
-        history.pushState(null, "", stringName);
     };
 
-    homeButton.click(() => scrollDiv(home[0],"#home"));
-    aboutUsButton.click(() => scrollDiv(aboutUs[0],"#about-us"));
-    galleryButton.click(() => scrollDivTwo(gallery[0],"#promotional-bags"));
-    homeButtonOne.click(() => scrollDivTwo(gallery[0],"#promotional-bags"));
-    contactButton.click(() => scrollDivTwo(contact[0],"#contact-us"));
-    homeButtonTwo.click(() => scrollDivTwo(contact[0],"#contact-us"));
+    homeButton.click(() => scrollDiv(home[0]));
+    aboutUsButton.click(() => scrollDiv(aboutUs[0]));
+    galleryButton.click(() => scrollDivTwo(gallery[0]));
+    homeButtonOne.click(() => scrollDivTwo(gallery[0]));
+    contactButton.click(() => scrollDivTwo(contact[0]));
+    homeButtonTwo.click(() => scrollDivTwo(contact[0]));
 };
 
 export default scrollToSections;
