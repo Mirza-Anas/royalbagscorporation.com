@@ -88,7 +88,7 @@ $(() => {
     // hamburger menu code for mobile portrait
     // submenu.css({ display: "none" });
     let isFadeIn = false;
-    // submenu.fadeOut();
+    submenu.fadeOut();
     menu.click(() => {
         // if (submenu.css("display") == "none") {
         //     submenu.css({ display: "flex" });
