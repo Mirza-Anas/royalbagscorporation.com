@@ -148,26 +148,11 @@
     margin-top: 2vh;
     width: 80%;
   }
-  @keyframes reveal {
-    0% {
-      top: 100%;
-      opacity: 0;
-    }
-    100% {
-      top: 0%;
-      opacity: 1;
-    }
-  }
   .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading {
     column-gap: 2vh;
   }
   .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading h2 {
     font-size: 10vw;
-    position: relative;
-    overflow: hidden;
-    top: 100%;
-    opacity: 0;
-    animation: reveal 0.5s ease-in-out 5s 1 forwards;
   }
   .about_us .about_us-upper .about_us-upper-content hr {
     width: 70%;
@@ -697,6 +682,21 @@
   }
   .copyright {
     font-size: 4vw;
+  }
+  #loader-page .loader-logo-wrapper .loader-logo {
+    width: 15vw;
+  }
+  #loader-page .loader-name-wrapper div {
+    column-gap: 3vw;
+    height: 20vw;
+  }
+  #loader-page .loader-name-wrapper div h1 {
+    font-size: 7vw;
+    font-weight: 400;
+  }
+  #loader-page .loader-icon {
+    width: 15vw;
+    top: 65%;
   }
 }
 @media screen and (min-aspect-ratio: 1/1) {
@@ -1400,6 +1400,21 @@
     color: rgb(0, 0, 0);
     background-color: rgb(201, 201, 201);
   }
+  #loader-page .loader-logo-wrapper .loader-logo {
+    width: 6vw;
+  }
+  #loader-page .loader-name-wrapper div {
+    column-gap: 0.8vw;
+    height: 5vw;
+  }
+  #loader-page .loader-name-wrapper div h1 {
+    font-size: 3vw;
+    font-weight: 400;
+  }
+  #loader-page .loader-icon {
+    width: 5vw;
+    top: 75%;
+  }
 }
 @font-face {
   font-family: "GreatVibes";
@@ -1632,34 +1647,12 @@ header {
   justify-content: center;
   position: relative;
 }
-@keyframes reveal {
-  0% {
-    top: 100%;
-    opacity: 0;
-  }
-  100% {
-    top: 0%;
-    opacity: 1;
-  }
-}
 .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading {
   display: flex;
   overflow: hidden;
 }
-.about_us .about_us-upper .about_us-upper-content .about_us-upper-heading h2 {
-  position: relative;
-  overflow: hidden;
-  top: 100%;
-  opacity: 0;
-  animation: reveal 0.5s ease-in-out 5s 1 forwards;
-}
 .about_us .about_us-upper .about_us-upper-content .about_us-upper-heading :nth-child(2) {
-  position: relative;
-  overflow: hidden;
   color: rgb(226, 196, 27);
-  top: 100%;
-  opacity: 0;
-  animation: reveal 0.7s ease-in-out 5s 1 forwards;
 }
 .about_us .about_us-upper .about_us-upper-content h3 {
   font-weight: 100;
@@ -1675,6 +1668,9 @@ header {
   color: white;
   border-radius: 5vw;
   font-family: "Times New Roman", Times, serif;
+}
+.about_us .about_us-upper .about_us-upper-heading:hover h2 {
+  opacity: 1;
 }
 .about_us .about_us-lower {
   display: flex;
@@ -2004,6 +2000,78 @@ header {
   height: 4vh;
   color: rgb(0, 0, 0);
   background-color: rgb(201, 201, 201);
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loaderAnimation {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: 0%;
+    opacity: 1;
+  }
+}
+#loader-page {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#loader-page .loader-logo-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+#loader-page .loader-logo-wrapper .loader-logo {
+  position: relative;
+}
+#loader-page .loader-name-wrapper {
+  overflow: hidden;
+}
+#loader-page .loader-name-wrapper div {
+  display: flex;
+  position: relative;
+}
+#loader-page .loader-name-wrapper div h1 {
+  font-family: "blacksword";
+}
+#loader-page .loader-name-wrapper div .loader-name1 {
+  position: relative;
+  top: 100%;
+  opacity: 0;
+  animation: loaderAnimation 0.7s ease-in 0s 1 forwards;
+}
+#loader-page .loader-name-wrapper div .loader-name2 {
+  position: relative;
+  top: 100%;
+  opacity: 0;
+  animation: loaderAnimation 0.9s ease-in 0s 1 forwards;
+}
+#loader-page .loader-name-wrapper div .loader-name3 {
+  position: relative;
+  top: 100%;
+  opacity: 0;
+  animation: loaderAnimation 1.1s ease-in 0s 1 forwards;
+}
+#loader-page .loader-icon {
+  position: absolute;
+  transform: rotate(0deg);
+  animation: loader 0.8s linear 0s infinite;
 }
 
 /*# sourceMappingURL=index.css.map */

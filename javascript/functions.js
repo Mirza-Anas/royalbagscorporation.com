@@ -3,12 +3,14 @@ import handleTechSlide from "./handleTechSlide.js";
 import scrollToSections from "./scrollToSections.js";
 import { currentSection } from "./headerFunctions.js";
 
-$(() => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
+$(window).on('load', function() {
+    // Hide the loading screen when all content has loaded
+    setTimeout(() => {
+        $('#loader-page').fadeOut();
+    },1500)
+  });
 
+$(() => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
