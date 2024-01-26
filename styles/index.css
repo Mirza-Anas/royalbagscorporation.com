@@ -111,7 +111,8 @@
   .home .home-first_half div button {
     padding: 2vw 4vw;
     border-radius: 5vw;
-    font-size: 3vw;
+    font-size: 3.5vw;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .home .home-second_half {
     order: 1;
@@ -536,7 +537,7 @@
     margin-top: 15vw;
     grid-column: 1/span 24;
     grid-row: 1/span 24;
-    font-size: 20vw;
+    font-size: 17vw;
     color: rgba(0, 0, 0, 0.068);
     overflow: hidden;
   }
