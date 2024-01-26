@@ -27,29 +27,29 @@
     align-items: center;
   }
   .header1 .header-nav_bar .header-navbar-portrait img {
-    margin-left: 2vw;
+    margin-left: 2%;
     width: 5vw;
     height: 5vw;
   }
   .header1 .header-nav_bar .header-navbar-portrait .header-navbar-submenu {
-    display: none;
-    position: absolute;
-    width: 98%;
     display: flex;
+    position: fixed;
+    width: 100%;
     flex-direction: column;
     top: 6vh;
-    left: 1%;
+    left: 0;
+    height: 94vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(209, 185, 49);
+    row-gap: 17vw;
   }
   .header1 .header-nav_bar .header-navbar-portrait .header-navbar-submenu div {
-    padding: 1vw 0;
-    margin-top: 0.5vw;
-    display: flex;
-    align-items: center;
-    width: 99.5%;
-    justify-content: center;
-    border-radius: 0.5vw;
-    border: 1px solid rgb(0, 0, 0);
-    background-color: rgb(199, 199, 199);
+    font-size: 10vw;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: rgb(36, 36, 36);
   }
   .header1 .header-social_icons {
     order: 3;
@@ -1548,6 +1548,8 @@ header {
 }
 .home .home-first_half p {
   margin-top: 2vw;
+  font-weight: bold;
+  color: rgb(39, 39, 39);
 }
 .home .home-first_half .home-fh3 {
   z-index: 2;

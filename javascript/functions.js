@@ -3,12 +3,12 @@ import handleTechSlide from "./handleTechSlide.js";
 import scrollToSections from "./scrollToSections.js";
 import { currentSection } from "./headerFunctions.js";
 
-$(window).on('load', function() {
+$(window).on("load", function () {
     // Hide the loading screen when all content has loaded
     setTimeout(() => {
-        $('#loader-page').fadeOut();
-    },1500)
-  });
+        $("#loader-page").fadeOut();
+    }, 1500);
+});
 
 $(() => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -86,12 +86,21 @@ $(() => {
     );
 
     // hamburger menu code for mobile portrait
-    submenu.css({ display: "none" });
+    // submenu.css({ display: "none" });
+    let isFadeIn = false;
+    // submenu.fadeOut();
     menu.click(() => {
-        if (submenu.css("display") == "none") {
-            submenu.css({ display: "block" });
+        // if (submenu.css("display") == "none") {
+        //     submenu.css({ display: "flex" });
+        // } else {
+        //     submenu.css({ display: "none" });
+        // }
+        if (isFadeIn) {
+            submenu.fadeOut();
+            isFadeIn = false;
         } else {
-            submenu.css({ display: "none" });
+            submenu.fadeIn();
+            isFadeIn = true;
         }
     });
 
