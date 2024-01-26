@@ -31,22 +31,29 @@ $(() => {
     const techDots = [$("#tedot1"), $("#tedot2"), $("#tedot3")];
 
     // header related
-    const menu = $(".header-navbar-portrait img");
+    const menu = $(".menu-hamburger-button");
     const submenu = $(".header-navbar-submenu");
 
     // elements for scroll
     const home = $(".home");
     const homeButton = $("#home-button-m");
+    const homeButtonP = $("#home-button-p");
     const homeButtonOne = $(".home-products");
     const homeButtonTwo = $(".home-connect");
     const aboutUs = $(".about_us");
     const aboutUsButton = $("#about-us-m");
+    const aboutUsButtonP = $("#about-us-p");
     const gallery = $(".products-main");
     const galleryButton = $("#gallery-m");
+    const galleryButtonP = $("#gallery-p");
     const contact = $(".contact_us");
     const contactButton = $("#contact-m");
+    const contactButtonP = $("#contact-p");
+    const menuCancelButton = $(".navbar-cancel-button");
 
     let temp = 400;
+
+    let isFadeIn = false;
 
     // adding current section underline in nav bar
     window.addEventListener("scroll", () => {
@@ -75,34 +82,34 @@ $(() => {
     scrollToSections(
         home,
         homeButton,
+        homeButtonP,
         homeButtonOne,
         homeButtonTwo,
         aboutUs,
         aboutUsButton,
+        aboutUsButtonP,
         gallery,
         galleryButton,
+        galleryButtonP,
         contact,
-        contactButton
+        contactButton,
+        contactButtonP
     );
 
     // hamburger menu code for mobile portrait
     // submenu.css({ display: "none" });
-    let isFadeIn = false;
     submenu.fadeOut();
     menu.click(() => {
-        // if (submenu.css("display") == "none") {
-        //     submenu.css({ display: "flex" });
-        // } else {
-        //     submenu.css({ display: "none" });
-        // }
-        if (isFadeIn) {
-            submenu.fadeOut();
-            isFadeIn = false;
-        } else {
             submenu.fadeIn();
-            isFadeIn = true;
-        }
+            menuCancelButton.css({"display":"block"});
+            menu.css({"display":"none"});
     });
+
+    menuCancelButton.click(() => {
+        submenu.fadeOut();
+        menu.css({"display":"block"});
+        menuCancelButton.css({"display":"none"});
+    })
 
     // make about us below section slideable in phone
     handleAboutSlide(aboutSlide, aboutDots);

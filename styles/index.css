@@ -31,6 +31,11 @@
     width: 5vw;
     height: 5vw;
   }
+  .header1 .header-nav_bar .header-navbar-portrait .navbar-cancel-button {
+    display: none;
+    width: 6.5vw;
+    height: auto;
+  }
   .header1 .header-nav_bar .header-navbar-portrait .header-navbar-submenu {
     display: flex;
     position: fixed;
@@ -41,14 +46,17 @@
     height: 94vh;
     align-items: center;
     justify-content: center;
-    background-color: rgb(209, 185, 49);
-    row-gap: 17vw;
+    background-color: rgb(252, 223, 61);
+    row-gap: 14vw;
   }
   .header1 .header-nav_bar .header-navbar-portrait .header-navbar-submenu div {
-    font-size: 10vw;
+    font-size: 9vw;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-weight: bolder;
     text-decoration: underline;
+  }
+  .header1 .header-nav_bar .header-navbar-portrait .header-navbar-submenu div a {
+    text-decoration: none;
     color: rgb(36, 36, 36);
   }
   .header1 .header-social_icons {
