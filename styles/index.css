@@ -5,6 +5,9 @@
   }
   .header1 {
     height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .header1 .header-logo {
     display: flex;
