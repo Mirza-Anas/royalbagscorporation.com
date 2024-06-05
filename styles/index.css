@@ -35,18 +35,12 @@
   .header1 .header-nav_bar ul li {
     display: none;
   }
-  .header1 .header-nav_bar .header-navbar-portrait {
-    display: flex;
-    align-items: center;
-  }
   .header1 .header-nav_bar .header-navbar-portrait img {
     width: 5vw;
     height: 5vw;
   }
   .header1 .header-nav_bar .header-navbar-portrait .navbar-cancel-button {
     display: none;
-    width: 6.5vw;
-    height: auto;
   }
   .header1 .header-nav_bar .header-navbar-portrait .header-navbar-submenu {
     display: flex;

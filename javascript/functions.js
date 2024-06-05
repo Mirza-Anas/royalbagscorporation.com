@@ -106,13 +106,13 @@ $(() => {
     submenu.fadeOut();
     menu.click(() => {
             submenu.fadeIn();
-            menuCancelButton.css({"display":"block"});
+            menuCancelButton.css({"display":"inline-block"});
             menu.css({"display":"none"});
     });
 
     menuCancelButton.click(() => {
         submenu.fadeOut();
-        menu.css({"display":"block"});
+        menu.css({"display":"inline-block"});
         menuCancelButton.css({"display":"none"});
     })
 
