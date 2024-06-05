@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
   }
   .header1 .header-logo {
     display: flex;
@@ -25,7 +24,13 @@
   .header1 .header-nav_bar {
     width: 40%;
     height: 6vh;
+    display: flex;
+    align-items: center;
     order: 1;
+    padding-left: 3%;
+  }
+  .header1 .header-nav_bar ul {
+    width: 0px;
   }
   .header1 .header-nav_bar ul li {
     display: none;
@@ -35,7 +40,6 @@
     align-items: center;
   }
   .header1 .header-nav_bar .header-navbar-portrait img {
-    margin-left: 2%;
     width: 5vw;
     height: 5vw;
   }
@@ -43,7 +47,6 @@
     display: none;
     width: 6.5vw;
     height: auto;
-    margin-left: 2%;
   }
   .header1 .header-nav_bar .header-navbar-portrait .header-navbar-submenu {
     display: flex;
