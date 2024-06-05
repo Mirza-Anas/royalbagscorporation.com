@@ -5,9 +5,11 @@
   }
   .header1 {
     height: 6vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
   .header1 .header-logo {
     display: flex;
