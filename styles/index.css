@@ -16,17 +16,15 @@
     align-items: center;
     justify-content: center;
     width: 20%;
+    height: 6vh;
     order: 2;
   }
   .header1 .header-logo .header-logo-upper img {
     width: 9vw;
   }
-  .header1 .header-logo .header-logo-upper h1 {
-    margin-top: 0.1vw;
-    font-size: 5vw;
-  }
   .header1 .header-nav_bar {
     width: 40%;
+    height: 6vh;
     order: 1;
   }
   .header1 .header-nav_bar ul li {
@@ -35,7 +33,6 @@
   .header1 .header-nav_bar .header-navbar-portrait {
     display: flex;
     align-items: center;
-    width: 30%;
   }
   .header1 .header-nav_bar .header-navbar-portrait img {
     margin-left: 2%;
@@ -46,6 +43,7 @@
     display: none;
     width: 6.5vw;
     height: auto;
+    margin-left: 2%;
   }
   .header1 .header-nav_bar .header-navbar-portrait .header-navbar-submenu {
     display: flex;
@@ -72,8 +70,9 @@
   }
   .header1 .header-social_icons {
     order: 3;
-    margin-right: 1%;
+    padding-right: 2%;
     width: 40%;
+    height: 6vh;
   }
   .header1 .header-social_icons div {
     column-gap: 2vw;
