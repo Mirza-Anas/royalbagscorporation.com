@@ -108,12 +108,16 @@ $(() => {
             submenu.fadeIn();
             menuCancelButton.css({"display":"inline-block"});
             menu.css({"display":"none"});
+            // menuCancelButton.fadeIn();
+            // menu.fadeOut();
     });
 
     menuCancelButton.click(() => {
         submenu.fadeOut();
-        menu.css({"display":"inline-block"});
+        menu.css({"display":""});
         menuCancelButton.css({"display":"none"});
+        // menu.fadeIn();
+        // menuCancelButton.fadeOut();
     })
 
     // make about us below section slideable in phone
