@@ -1929,9 +1929,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgb(231, 228, 217) !important;
 }
 .products-main .products * img {
   cursor: pointer;
+  background-color: transparent !important;
 }
 
 .tech {
