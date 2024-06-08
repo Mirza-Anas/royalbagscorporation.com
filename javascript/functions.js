@@ -2,6 +2,7 @@ import handleAboutSlide from "./handleAboutSlide.js";
 import handleTechSlide from "./handleTechSlide.js";
 import scrollToSections from "./scrollToSections.js";
 import { currentSection } from "./headerFunctions.js";
+// import handleForm from "./handleForm.js";
 // import carousel from "./carousel.js";
 
 $(window).on("load", function () {
@@ -53,6 +54,40 @@ $(() => {
     const menuCancelButton = $(".navbar-cancel-button");
     const corausel = $(".clients-carousel");
     const camelTea = $(".clients-camel-tea clients-logo");
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = {}
+        formData.forEach((key, value) => {
+            data[value] = key
+        });
+
+        if (data["form-name"] === "") alert("Name is Required");
+        else if (data["form-mail"] === "") alert("Mail is Required");
+        else if (data["message"] === "") alert("Please write your qurey in message box");
+        else {
+            alert("We recieved your message. You will hear from us soon");
+            document.getElementById("form-name").value = "";
+            document.getElementById("form-mail").value = "";
+            document.getElementById("form-message").value = "";
+            try {
+                const response = await fetch("https://rbc-backend.onrender.com", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                console.log(response);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+    })
     
     // carousel(corausel[0], camelTea[0]);
 
